@@ -1,5 +1,5 @@
 ---
 applications:
-- name: GetStartedASPNetCore
+- name: GetStartedDotnet
   random-route: true
-  memory: 512M
+  memory: 256M
