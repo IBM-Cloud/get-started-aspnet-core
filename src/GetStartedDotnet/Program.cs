@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Hosting;
 
-namespace WebApplication
+namespace GetStartedDotnet
 {
     public class Program
     {

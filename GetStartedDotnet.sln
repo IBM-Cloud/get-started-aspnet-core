@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WebApplication", "src\WebApplication\WebApplication.xproj", "{1147A1AE-A354-4FBF-8864-2A75EF18EA65}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GetStartedDotnet", "src\GetStartedDotnet\GetStartedDotnet.xproj", "{1147A1AE-A354-4FBF-8864-2A75EF18EA65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
