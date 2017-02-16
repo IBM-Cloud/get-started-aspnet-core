@@ -1,0 +1,5 @@
+---
+applications:
+- name: GetStartedASPNetCore
+  random-route: true
+  memory: 512M
