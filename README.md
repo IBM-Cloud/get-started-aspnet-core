@@ -46,7 +46,7 @@ cd get-started-aspnet-core
 
 Run the app.
   ```
-cd src/WebApplication
+cd src/GetStartedDotnet
   ```
   {: pre}
   ```
