@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2011-02-14"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -68,9 +68,9 @@ To deploy to {{site.data.keyword.Bluemix_notm}}, it can be helpful to set up a m
 The manifest.yml includes basic information about your app, such as the name, how much memory to allocate for each instance and the route. In this manifest.yml **random-route: true** generates a random route for your app to prevent your route from colliding with others.  You can replace **random-route: true** with **host: myChosenHostName**, supplying a host name of your choice. [Learn more...](/docs/manageapps/depapps.html#appmanifest)
  ```
  applications:
- - name: GetStartedASPNetCore
+ - name: GetStartedDotnet
    random-route: true
-   memory: 512M
+   memory: 256M
  ```
  {: codeblock}
 
@@ -115,6 +115,52 @@ cf apps
   ```
   {: pre}
   command to view your apps status and see the URL.
+
+## 5. Connect a MySQL database
+{: connect_mysql}
+
+Next, we'll add a ClearDB MySQL database to this application and set up the application so that it can run locally and on Bluemix.
+
+1. Log in to {{site.data.keyword.Bluemix_notm}} in your Browser. Browse to the `Dashboard`. Select your application by clicking on its name in the `Name` column.
+2. Click on `Connections` then `Connect new`.
+2. In the `Data & Analytics` section, select `ClearDB MySQL Database` and `Create` the service.
+3. Select `Restage` when prompted. {{site.data.keyword.Bluemix_notm}} will restart your application and provide the database credentials to your application using the `VCAP_SERVICES` environment variable. This environment variable is only available to the application when it is running on {{site.data.keyword.Bluemix_notm}}.
+
+Environment variables enable you to separate deployment settings from your source code. For example, instead of hardcoding a database password, you can store this in an environment variable which you reference in your source code. [Learn more...](/docs/manageapps/depapps.html#app_env)
+{: tip}
+
+## 6. Use the database locally
+{: #use_database}
+
+We're now going to update your local code to point to this database. We'll store the credentials for the services in a json file. This file will get used ONLY when the application is running locally. When running in {{site.data.keyword.Bluemix_notm}}, the credentials will be read from the VCAP_SERVICES environment variable.
+
+1. Create the file src/GetStartedDotnet/vcap-local.json
+
+2. In your browser open the {{site.data.keyword.Bluemix_notm}} UI, select your App -> Connections -> ClearDB MySQL Database -> View Credentials
+
+3. Copy and paste the entire json object from the credentials to the `vcap-local.json` file and save the changes.  The result will be something like:
+  ```
+  {
+  "cleardb": [
+    {
+      "credentials": {
+        ...
+        "uri": "mysql://user:password@some-hostname.cleardb.net:3306/database-name?reconnect=true",
+        ...
+      },
+      ...
+      "name": "My ClearDB service instance name",
+      ...
+    }
+  ]
+}
+  ```
+
+4. Restart your application (if it is still running).
+
+  Refresh your browser view at: http://localhost:5000/. Any names you enter into the app will now get added to the database.
+
+  Your local app and the {{site.data.keyword.Bluemix_notm}} app are sharing the database.  View your {{site.data.keyword.Bluemix_notm}} app at the URL listed in the output of the push command from above.  Names you add from either app should appear in both when you refresh the browsers.
 
 Remember if you don't need your app live, stop it so you don't incur any unexpected charges.
 {: tip}
