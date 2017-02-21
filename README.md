@@ -26,7 +26,7 @@ You'll need the following:
 * [{{site.data.keyword.Bluemix_notm}} account](https://console.ng.bluemix.net/registration/)
 * [Cloud Foundry CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#downloads){: new_window}
 * [Git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
-* Install ASP.NET Core by following the [Getting Started ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.microsoft.com/en-us/aspnet/core/getting-started) instructions.
+* Install .NET Core 1.0.0-preview4-004233 SDK from the [preview4 download page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/dotnet/core/blob/master/release-notes/preview4-download.md) instructions.
 
 ## 1. Clone the sample app
 {: #clone}
