@@ -9,7 +9,10 @@
             "program": "${workspaceRoot}/src/GetStartedDotnet/bin/Debug/netcoreapp1.0/GetStartedDotnet.dll",
             "args": [],
             "cwd": "${workspaceRoot}",
-            "stopAtEntry": false
+            "stopAtEntry": false,
+            "sourceFileMap": {
+                "/Views": "${workspaceRoot}/src/GetStartedDotnet/Views"
+            }
         },
         {
             "name": ".NET Core Launch (web)",
@@ -33,6 +36,9 @@
                 "linux": {
                     "command": "xdg-open"
                 }
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceRoot}/src/GetStartedDotnet/Views"
             }
         }
     ]

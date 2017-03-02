@@ -8,7 +8,7 @@
     "tasks": [
         {
             "taskName": "build",
-            "args": [ "src/GetStartedDotnet", "--no-incremental" ],
+            "args": [ "src/GetStartedDotnet/GetStartedDotnet.csproj", "--no-incremental" ],
             "isBuildCommand": true,
             "showOutput": "always",
             "problemMatcher": "$msCompile"
