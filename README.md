@@ -14,7 +14,7 @@ You'll need the following:
 * [Bluemix account](https://console.ng.bluemix.net/registration/)
 * [Cloud Foundry CLI](https://github.com/cloudfoundry/cli#downloads)
 * [Git](https://git-scm.com/downloads)
-* Install .NET Core 1.0.0-preview4-004233 SDK from the [preview4 download page](https://github.com/dotnet/core/blob/master/release-notes/preview4-download.md) instructions.
+* Install .NET Core 1.0.0-preview4-004233 SDK from the [preview4 download page](https://github.com/dotnet/core/blob/master/release-notes/download-archives/preview4-download.md) instructions.
 * Install the latest .NET Core Runtime from the [dot.net website](https://www.microsoft.com/net/download/core#/runtime)
 
 ## 1. Clone the sample app
