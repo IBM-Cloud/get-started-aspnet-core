@@ -14,8 +14,7 @@ You'll need the following:
 * [Bluemix account](https://console.ng.bluemix.net/registration/)
 * [Cloud Foundry CLI](https://github.com/cloudfoundry/cli#downloads)
 * [Git](https://git-scm.com/downloads)
-* Install .NET Core 1.0.0-preview4-004233 SDK from the [preview4 download page](https://github.com/dotnet/core/blob/master/release-notes/download-archives/preview4-download.md) instructions.
-* Install the latest .NET Core Runtime from the [dot.net website](https://www.microsoft.com/net/download/core#/runtime)
+* Install .NET Core SDK v1.0.4 from the [dot.net website](https://www.microsoft.com/net/download/core) instructions.
 
 ## 1. Clone the sample app
 
@@ -46,7 +45,7 @@ The manifest.yml includes basic information about your app, such as the name, ho
  applications:
  - name: GetStartedDotnet
    random-route: true
-   memory: 256M
+   memory: 512M
  ```
 
 ## 4. Deploy the app
@@ -68,6 +67,7 @@ Replace the *API-endpoint* in the command with an API endpoint from the followin
 |URL                             |Region          |
 |:-------------------------------|:---------------|
 | https://api.ng.bluemix.net     | US South       |
+| https://api.eu-de.bluemix.net  | Germany        |
 | https://api.eu-gb.bluemix.net  | United Kingdom |
 | https://api.au-syd.bluemix.net | Sydney         |
 
