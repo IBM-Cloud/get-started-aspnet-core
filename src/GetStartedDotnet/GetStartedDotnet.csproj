@@ -20,15 +20,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="**\*.cshtml;appsettings.json;vcap-local.json;" CopyToOutputDirectory="Always" />
     <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.4.*" />
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.0.*" />
   </ItemGroup>
 
   <Target Name="AddWwwRoot" BeforeTargets="AssignTargetPaths" DependsOnTargets="BeforeBuild;BeforePublish">
     <ItemGroup>
-      <Content Include="wwwroot\**">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
+      <Content Include="wwwroot\**" CopyToOutputDirectory="Always" />
     </ItemGroup>
   </Target>
 
