@@ -1,13 +1,13 @@
-#ASP.NET getting started application
-The Bluemix Getting started tutorial for ASP.NET uses this sample application to provide you with a sample workflow for working with any Dotnet app on Bluemix; you set up a development environment, deploy an app locally and on Bluemix, and integrate a Bluemix database service in your app.
+# ASP.NET Core getting started application
+The Bluemix Getting started tutorial for ASP.NET Core uses this sample application to provide you with a sample workflow for working with any Dotnet app on Bluemix; you set up a development environment, deploy an app locally and on Bluemix, and integrate a Bluemix database service in your app.
 
-The ASP.NET getting started application uses a[Cloudant noSQL DB service](https://console.bluemix.net/catalog/services/cloudant-nosql-db) to add information to a database and then return information from a database to the UI. To learn more about how the app connects to Cloudant, see the [Cloudant library for Node.js](https://www.npmjs.com/package/cloudant).
+The ASP.NET Core getting started application uses a [ClearDB MySQL service](https://github.com/SapientGuardian/SapientGuardian.EntityFrameworkCore.MySql) from Bluemix to add information to a database and then return information from a database to the UI. 
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/IBM-Bluemix/get-started-java/master/docs/GettingStarted.gif" width="300" alt="Gif of the sample app contains a title that says, Welcome, a prompt asking the user to enter their name, and a list of the database contents which are the names Joe, Jane, and Bob. The user enters the name, Mary and the screen refreshes to display, Hello, Mary, I've added you to the database. The database contents listed are now Mary, Joe, Jane, and Bob.">
 </p>
 
-The following steps are the general procedure to set up and deploy your app. See more detailed instructions in the [Getting started tutorial for ASP.NET](https://console.stage1.bluemix.net/docs/runtimes/dotnet/getting-started.html#getting_started).
+The following steps are the general procedure to set up and deploy your app. See more detailed instructions in the [Getting started tutorial for ASP.NET Core](https://console.stage1.bluemix.net/docs/runtimes/dotnet/getting-started.html#getting_started).
 
 
 ## Before you begin
