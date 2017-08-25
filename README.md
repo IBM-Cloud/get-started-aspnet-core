@@ -1,132 +1,15 @@
-# Getting started with ASP.NET on Bluemix
-This guide will take you through the steps to get started on Bluemix with the help of a sample application. In 10 minutes or less, you’ll learn to:
-- Set up a development environment
-- Download sample code
-- Run the application locally
-- Run the application on Bluemix Cloud Foundry
-- Add a Bluemix Database service
-- Connect to the database from your local application
+#ASP.NET getting started application
+The Bluemix Getting started tutorial for ASP.NET uses this sample application to provide you with a sample workflow for working with any Dotnet app on Bluemix; you set up a development environment, deploy an app locally and on Bluemix, and integrate a Bluemix database service in your app.
+
+The ASP.NET getting started application uses a[Cloudant noSQL DB service](https://console.bluemix.net/catalog/services/cloudant-nosql-db) to add information to a database and then return information from a database to the UI. To learn more about how the app connects to Cloudant, see the [Cloudant library for Node.js](https://www.npmjs.com/package/cloudant).
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/IBM-Bluemix/get-started-java/master/docs/GettingStarted.gif" width="300" alt="Gif of the sample app contains a title that says, Welcome, a prompt asking the user to enter their name, and a list of the database contents which are the names Joe, Jane, and Bob. The user enters the name, Mary and the screen refreshes to display, Hello, Mary, I've added you to the database. The database contents listed are now Mary, Joe, Jane, and Bob.">
+</p>
+
+The following steps are the general procedure to set up and deploy your app. See more detailed instructions in the [Getting started tutorial for ASP.NET](https://console.stage1.bluemix.net/docs/runtimes/dotnet/getting-started.html#getting_started).
 
 
-## Prerequisites
+## Before you begin
 
-You'll need the following:
-* [Bluemix account](https://console.ng.bluemix.net/registration/)
-* [Cloud Foundry CLI](https://github.com/cloudfoundry/cli#downloads)
-* [Git](https://git-scm.com/downloads)
-* Install .NET Core SDK v1.0.4 from the [dot.net website](https://www.microsoft.com/net/download/core) instructions.
-
-## 1. Clone the sample app
-
-Now you're ready to start working with the app. Clone the repository and change to the directory where the sample app is located.
-  ```
-git clone https://github.com/IBM-Bluemix/get-started-aspnet-core
-cd get-started-aspnet-core
-  ```
-
-## 2. Run the app locally
-{: #run_locally}
-
-Run the app.
-  ```
-cd src/GetStartedDotnet
-dotnet restore
-dotnet run
-  ```
-
-View your app at: http://localhost:5000/
-
-## 3. Prepare the app for deployment
-
-To deploy to Bluemix, it can be helpful to set up a manifest.yml file. One is provided for you with the sample. Take a moment to look at it.
-
-The manifest.yml includes basic information about your app, such as the name, how much memory to allocate for each instance and the route. In this manifest.yml **random-route: true** generates a random route for your app to prevent your route from colliding with others.  You can replace **random-route: true** with **host: myChosenHostName**, supplying a host name of your choice. [Learn more...](https://console.bluemix.net/docs/manageapps/depapps.html#appmanifest)
- ```
- applications:
- - name: GetStartedDotnet
-   random-route: true
-   memory: 512M
- ```
-
-## 4. Deploy the app
-
-You can use the Cloud Foundry CLI to deploy apps.
-
-To start, login to your Bluemix account:
-  ```
-cf login
-  ```
-
-Choose your API endpoint
-  ```
-cf api <API-endpoint>
-  ```
-
-Replace the *API-endpoint* in the command with an API endpoint from the following list.
-
-|URL                             |Region          |
-|:-------------------------------|:---------------|
-| https://api.ng.bluemix.net     | US South       |
-| https://api.eu-de.bluemix.net  | Germany        |
-| https://api.eu-gb.bluemix.net  | United Kingdom |
-| https://api.au-syd.bluemix.net | Sydney         |
-
-Be sure you are in the main directory, **aspnet-core-helloworld**, for your application.
-
-Push your application to Bluemix
-  ```
-cf push
-  ```
-
-This can take a minute. If there is an error in the deployment process you can use the command `cf logs <Your-App-Name> --recent` to troubleshoot.
-
-When deployment completes you should see a message indicating that your app is running.  View your app at the URL listed in the output of the push command.  You can also issue the
-  ```
-cf apps
-  ```
-  command to view your apps status and see the URL.
-
-## 5. Connect a MySQL database
-
-Next, we'll add a ClearDB MySQL database to this application and set up the application so that it can run locally and on Bluemix.
-
-1. Log in to Bluemix in your Browser. Browse to the `Dashboard`. Select your application by clicking on its name in the `Name` column.
-2. Click on `Connections` then `Connect new`.
-2. In the `Data & Analytics` section, select `ClearDB MySQL Database` and `Create` the service.
-3. Select `Restage` when prompted. Bluemix will restart your application and provide the database credentials to your application using the `VCAP_SERVICES` environment variable. This environment variable is only available to the application when it is running on Bluemix.
-
-Environment variables enable you to separate deployment settings from your source code. For example, instead of hardcoding a database password, you can store this in an environment variable which you reference in your source code. [Learn more...](/docs/manageapps/depapps.html#app_env)
-
-## 6. Use the database locally
-
-We're now going to update your local code to point to this database. We'll store the credentials for the services in a json file. This file will get used ONLY when the application is running locally. When running in Bluemix, the credentials will be read from the VCAP_SERVICES environment variable.
-
-1. Create the file src/GetStartedDotnet/vcap-local.json
-
-2. In your browser open the Bluemix UI, select your App -> Connections -> ClearDB MySQL Database -> View Credentials
-
-3. Copy and paste the entire json object from the credentials to the `vcap-local.json` file and save the changes.  The result will be something like:
-  ```
-  {
-  "cleardb": [
-    {
-      "credentials": {
-        ...
-        "uri": "mysql://user:password@some-hostname.cleardb.net:3306/database-name?reconnect=true",
-        ...
-      },
-      ...
-      "name": "My ClearDB service instance name",
-      ...
-    }
-  ]
-}
-  ```
-
-4. Restart your application (if it is still running).
-
-  Refresh your browser view at: http://localhost:5000/. Any names you enter into the app will now get added to the database.
-
-  Your local app and the Bluemix app are sharing the database.  View your Bluemix app at the URL listed in the output of the push command from above.  Names you add from either app should appear in both when you refresh the browsers.
-
-Remember if you don't need your app live, stop it so you don't incur any unexpected charges.
+You'll need a [Bluemix account](https://console.ng.bluemix.net/registration/), [Git](https://git-scm.com/downloads) [Cloud Foundry CLI](https://github.com/cloudfoundry/cli#downloads) and .NET Core SDK v1.0.4 from the [dot.net website](https://www.microsoft.com/net/download/core)
