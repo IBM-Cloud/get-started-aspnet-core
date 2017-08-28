@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using MySQL.Data.Entity.Extensions;
 using GetStartedDotnet.Models;
 using System;
 using Newtonsoft.Json;
@@ -48,7 +47,7 @@ public class Startup
         if (!string.IsNullOrEmpty(databaseUri))
         {
             // add database context
-            services.AddDbContext<VisitorsDbContext>(options => options.UseMySQL(getConnectionString(databaseUri)));
+            services.AddDbContext<VisitorsDbContext>(options => options.UseMySql(getConnectionString(databaseUri)));
         }
         
         // Add framework services.

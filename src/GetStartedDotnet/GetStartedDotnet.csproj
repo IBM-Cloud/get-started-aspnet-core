@@ -16,7 +16,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.0.*" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.0.*" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink.Loader" Version="14.0.*" />
-    <PackageReference Include="SapientGuardian.EntityFrameworkCore.MySql" Version="7.1.*" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="1.1.*" />
   </ItemGroup>
 
   <ItemGroup>
