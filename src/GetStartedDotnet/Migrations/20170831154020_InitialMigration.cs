@@ -9,7 +9,7 @@ namespace GetStartedDotnet.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Visitor",
+                name: "Visitors",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -18,14 +18,14 @@ namespace GetStartedDotnet.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Visitor", x => x.Id);
+                    table.PrimaryKey("PK_Visitors", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Visitor");
+                name: "Visitors");
         }
     }
 }
