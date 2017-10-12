@@ -102,7 +102,6 @@ public class Startup
         }
 
         var context = (app.ApplicationServices.GetService(typeof(VisitorsDbContext)) as VisitorsDbContext);
-        //context?.Database.Migrate();
 
         app.UseStaticFiles();
 
