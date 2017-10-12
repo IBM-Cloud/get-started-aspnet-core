@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <VersionPrefix>1.0.4</VersionPrefix>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <VersionPrefix>1.1.2</VersionPrefix>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
     <DebugType>portable</DebugType>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <AssemblyName>GetStartedDotnet</AssemblyName>
@@ -10,19 +10,19 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore" Version="1.0.*" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.0.*" />
-    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.0.*" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.0.*" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink.Loader" Version="14.0.*" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.*" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.*" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.*" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink.Loader" Version="14.1.*" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.*" />
-    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.8-dmr" />
-    <PackageReference Include="MySql.Data.EntityFrameworkCore.Design" Version="8.0.8-dmr" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.9-dmr" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore.Design" Version="8.0.9-dmr" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Update="**\*.cshtml;appsettings.json;vcap-local.json;" CopyToOutputDirectory="Always" />
-    <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.4.*" />
+    <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.5.*" />
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.0.*" />
   </ItemGroup>
 

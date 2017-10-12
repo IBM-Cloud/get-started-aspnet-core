@@ -8,13 +8,13 @@ using GetStartedDotnet.Models;
 namespace GetStartedDotnet.Migrations
 {
     [DbContext(typeof(VisitorsDbContext))]
-    [Migration("20170831154020_InitialMigration")]
+    [Migration("20171012161451_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .HasAnnotation("ProductVersion", "1.1.2");
+                .HasAnnotation("ProductVersion", "1.1.3");
 
             modelBuilder.Entity("GetStartedDotnet.Models.Visitor", b =>
                 {
