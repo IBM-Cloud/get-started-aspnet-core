@@ -13,7 +13,7 @@ namespace GetStartedDotnet.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .HasAnnotation("ProductVersion", "1.0.2");
+                .HasAnnotation("ProductVersion", "1.1.3");
 
             modelBuilder.Entity("GetStartedDotnet.Models.Visitor", b =>
                 {
@@ -24,7 +24,7 @@ namespace GetStartedDotnet.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Visitor");
+                    b.ToTable("Visitors");
                 });
         }
     }
