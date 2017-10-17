@@ -9,6 +9,8 @@ using Newtonsoft.Json;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using MySQL.Data.EntityFrameworkCore.Extensions;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Startup
 {
@@ -27,16 +29,36 @@ public class Startup
         string vcapServices = Environment.GetEnvironmentVariable("VCAP_SERVICES");
         if (vcapServices != null)
         {
-            dynamic json = JsonConvert.DeserializeObject(vcapServices);
-            if (json.cleardb != null)
+            dynamic json = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(vcapServices);
+            
+            // CF 'cleardb' service
+            if (json.ContainsKey("cleardb"))
             {
                 try
                 {
-                    Configuration["cleardb:0:credentials:uri"] = json.cleardb[0].credentials.uri;
+                    Configuration["cleardb:0:credentials:uri"] = json["cleardb"][0].credentials.uri;
                 }
                 catch (Exception)
                 {
                     // Failed to read ClearDB uri, ignore this and continue without a database
+                }
+            } 
+            // user-provided service with 'cleardb' in the name
+            else if (json.ContainsKey("user-provided")) 
+            {
+                foreach (var service in json["user-provided"]) 
+                {
+                    if (((String) service.name).Contains("cleardb")) 
+                    {
+                        try
+                        {
+                            Configuration["cleardb:0:credentials:uri"] = service.credentials.uri;
+                        }
+                        catch (Exception)
+                        {
+                            // Failed to read ClearDB uri, ignore this and continue without a database
+                        }
+                    }
                 }
             }
         }
