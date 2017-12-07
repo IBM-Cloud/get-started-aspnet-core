@@ -1,8 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <VersionPrefix>1.1.2</VersionPrefix>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <VersionPrefix>2.0</VersionPrefix>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
     <DebugType>portable</DebugType>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <AssemblyName>GetStartedDotnet</AssemblyName>
@@ -12,19 +12,20 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.*" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.*" />
-    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.*" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.*" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.0.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.*" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.*" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink.Loader" Version="14.1.*" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.*" />
     <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.9-dmr" />
     <PackageReference Include="MySql.Data.EntityFrameworkCore.Design" Version="8.0.9-dmr" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Update="**\*.cshtml;appsettings.json;vcap-local.json;" CopyToOutputDirectory="Always" />
-    <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.5.*" />
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="1.0.0" /> 
+    <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.6.*" />
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.0.*" />
   </ItemGroup>
 
