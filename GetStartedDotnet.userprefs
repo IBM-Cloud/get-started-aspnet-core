@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{FBE90CB3-17A0-4C81-A1F5-1CAE061D2B97}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/GetStartedDotnet/bundleconfig.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/GetStartedDotnet/Controllers/VisitorsController.cs">
     <Files>
       <File FileName="src/GetStartedDotnet/bundleconfig.json" Line="24" Column="2" />
       <File FileName="src/GetStartedDotnet/Program.cs" Line="1" Column="1" />
@@ -7,6 +7,9 @@
       <File FileName="src/GetStartedDotnet/Startup.cs" Line="15" Column="19" />
       <File FileName="src/GetStartedDotnet/appsettings.json" Line="11" Column="1" />
       <File FileName="src/GetStartedDotnet/Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="src/GetStartedDotnet/GetStartedDotnet.csproj" Line="9" Column="25" />
+      <File FileName="src/GetStartedDotnet/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="src/GetStartedDotnet/Controllers/VisitorsController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
