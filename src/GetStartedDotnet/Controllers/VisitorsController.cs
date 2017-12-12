@@ -38,16 +38,13 @@ namespace GetStartedDotnet.Controllers
         [HttpPost]
         public IEnumerable<string> Post([FromBody]Visitor visitor)
         {
-            if (_dbContext == null)
-            {
-                return new string[] { _htmlEncoder.Encode(visitor.Name) };
-            }
-            else
+            if (_dbContext != null)
             {
                 _dbContext.Visitors.Add(visitor);
                 _dbContext.SaveChanges();
-                return _dbContext.Visitors.Select(m => _htmlEncoder.Encode(m.Name)).ToList();
             }
+
+            return new string[] { _htmlEncoder.Encode("Hello " + visitor.Name) };
         }
     }
 }
