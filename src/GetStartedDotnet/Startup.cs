@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using GetStartedDotnet.Models;
+using GetStartedDotnet.Services;
 using System;
 using Newtonsoft.Json;
 using System.Linq;
@@ -32,11 +33,22 @@ public class Startup
             dynamic json = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(vcapServices);
             
             // CF 'cleardb' service
-            if (json.ContainsKey("cleardb"))
+            if (json.ContainsKey("cloudantNoSQLDB"))
             {
                 try
                 {
-                    Configuration["cleardb:0:credentials:uri"] = json["cleardb"][0].credentials.uri;
+                    Configuration["cloudantNoSQLD:0:credentials:username"] = json["cloudantNoSQLDB"][0].credentials.username;
+                    Console.WriteLine("username ");
+                    Console.WriteLine(json["cloudantNoSQLDB"][0].credentials.username);
+                    Configuration["cloudantNoSQLD:0:credentials:password"] = json["cloudantNoSQLDB"][0].credentials.password;
+                    Console.WriteLine("password ");
+                    Console.WriteLine(json["cloudantNoSQLDB"][0].credentials.password);
+                    Configuration["cloudantNoSQLD:0:credentials:host"] = json["cloudantNoSQLDB"][0].credentials.host;
+                    Console.WriteLine("host ");
+                    Console.WriteLine(json["cloudantNoSQLDB"][0].credentials.host);
+                    Configuration["cloudantNoSQLD:0:credentials:url"] = json["cloudantNoSQLDB"][0].credentials.url;
+                    Console.WriteLine("url ");
+                    Console.WriteLine(json["cloudantNoSQLDB"][0].credentials.url);
                 }
                 catch (Exception)
                 {
@@ -66,15 +78,24 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        var databaseUri = Configuration["cleardb:0:credentials:uri"];
-        if (!string.IsNullOrEmpty(databaseUri))
-        {
-            // add database context
-            services.AddDbContext<VisitorsDbContext>(options => options.UseMySQL(getConnectionString(databaseUri)));
-        }
+        //var databaseUri = Configuration["cleardb:0:credentials:uri"];
+        //if (!string.IsNullOrEmpty(databaseUri))
+        //{
+        //    // add database context
+        //    services.AddDbContext<VisitorsDbContext>(options => options.UseMySQL(getConnectionString(databaseUri)));
+        //}
         
-        // Add framework services.
+        //// Add framework services.
         services.AddMvc();
+
+        var creds = new GetStartedDotnet.Models.Creds()
+        {
+            username = Configuration["cloudantNoSQLDB:0:credentials:username"],
+            password = Configuration["cloudantNoSQLDB:0:credentials:password"],
+            host = Configuration["cloudantNoSQLDB:0:credentials:host"]
+        };
+        services.AddSingleton(typeof(GetStartedDotnet.Models.Creds), creds);
+        services.AddTransient<ICloudantService, CloudantService>();
     }
 
     private string getConnectionString(string databaseUri)
