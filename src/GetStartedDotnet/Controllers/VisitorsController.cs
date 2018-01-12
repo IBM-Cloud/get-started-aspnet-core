@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using GetStartedDotnet.Models;
+using GetStartedDotnet.Services;
+using System.Threading.Tasks;
 using System.Linq;
 using System.Text.Encodings.Web;
 
@@ -12,36 +14,43 @@ namespace GetStartedDotnet.Controllers
     public class VisitorsController : Controller
     {
         private readonly HtmlEncoder _htmlEncoder;
-        private readonly VisitorsDbContext _dbContext;
+        //private readonly VisitorsDbContext _dbContext;
+        private readonly ICloudantService _cloudantService;
 
-        public VisitorsController(HtmlEncoder htmlEncoder, VisitorsDbContext dbContext = null)
+        public VisitorsController(ICloudantService cloudantService)
         {
-            _dbContext = dbContext;
+            _cloudantService = cloudantService;
             _htmlEncoder = htmlEncoder;
         }
 
         // GET: api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<dynamic> Get()
         {
-            if (_dbContext == null)
+            if (_cloudantService == null)
             {
                 return new string[] { "No database connection" };
             }
             else
             {
-                return _dbContext.Visitors.Select(m => _htmlEncoder.Encode(m.Name)).ToList();
+                //return _dbContext.Visitors.Select(m => _htmlEncoder.Encode(m.Name)).ToList();
+                return await _cloudantService.GetAllAsync();
             }
         }
 
         // POST api/values
         [HttpPost]
-        public IEnumerable<string> Post([FromBody]Visitor visitor)
+        public async Task<dynamic> Post([FromBody]Visitor visitor)
         {
-            if (_dbContext != null)
+            //if (_dbContext != null)
+            //{
+            //    _dbContext.Visitors.Add(visitor);
+            //    _dbContext.SaveChanges();
+            //}
+
+            if(_cloudantService != null)
             {
-                _dbContext.Visitors.Add(visitor);
-                _dbContext.SaveChanges();
+                await _cloudantService.CreateAsync(visitor);
             }
 
             return new string[] { _htmlEncoder.Encode("Hello " + visitor.Name) };
