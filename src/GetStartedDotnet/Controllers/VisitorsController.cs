@@ -17,7 +17,7 @@ namespace GetStartedDotnet.Controllers
         //private readonly VisitorsDbContext _dbContext;
         private readonly ICloudantService _cloudantService;
 
-        public VisitorsController(ICloudantService cloudantService)
+        public VisitorsController(HtmlEncoder htmlEncoder, ICloudantService cloudantService = null)
         {
             _cloudantService = cloudantService;
             _htmlEncoder = htmlEncoder;

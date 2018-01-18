@@ -12,10 +12,11 @@ using Microsoft.EntityFrameworkCore;
 using MySql.Data.EntityFrameworkCore.Extensions;
 using System.Collections;
 using System.Collections.Generic;
+using Newtonsoft.Json.Linq; //DELETE THIS
 
 public class Startup
 {
-    public IConfigurationRoot Configuration { get; }
+    public IConfigurationRoot Configuration { get; set; }
 
     public Startup(IHostingEnvironment env)
     {
@@ -37,16 +38,16 @@ public class Startup
             {
                 try
                 {
-                    Configuration["cloudantNoSQLD:0:credentials:username"] = json["cloudantNoSQLDB"][0].credentials.username;
+                    Configuration["cloudantNoSQLDB:0:credentials:username"] = json["cloudantNoSQLDB"][0].credentials.username;
                     Console.WriteLine("username ");
-                    Console.WriteLine(json["cloudantNoSQLDB"][0].credentials.username);
-                    Configuration["cloudantNoSQLD:0:credentials:password"] = json["cloudantNoSQLDB"][0].credentials.password;
+                    Console.WriteLine(Configuration["cloudantNoSQLDB:0:credentials:username"]);
+                    Configuration["cloudantNoSQLDB:0:credentials:password"] = json["cloudantNoSQLDB"][0].credentials.password;
                     Console.WriteLine("password ");
                     Console.WriteLine(json["cloudantNoSQLDB"][0].credentials.password);
-                    Configuration["cloudantNoSQLD:0:credentials:host"] = json["cloudantNoSQLDB"][0].credentials.host;
+                    Configuration["cloudantNoSQLDB:0:credentials:host"] = json["cloudantNoSQLDB"][0].credentials.host;
                     Console.WriteLine("host ");
                     Console.WriteLine(json["cloudantNoSQLDB"][0].credentials.host);
-                    Configuration["cloudantNoSQLD:0:credentials:url"] = json["cloudantNoSQLDB"][0].credentials.url;
+                    Configuration["cloudantNoSQLDB:0:credentials:url"] = json["cloudantNoSQLDB"][0].credentials.url;
                     Console.WriteLine("url ");
                     Console.WriteLine(json["cloudantNoSQLDB"][0].credentials.url);
                 }
@@ -60,11 +61,14 @@ public class Startup
             {
                 foreach (var service in json["user-provided"]) 
                 {
-                    if (((String) service.name).Contains("cleardb")) 
+                    if (((String) service.name).Contains("cloudantNoSQLDB")) 
                     {
                         try
                         {
-                            Configuration["cleardb:0:credentials:uri"] = service.credentials.uri;
+                            Configuration["cloudantNoSQLDB:0:credentials:username"] = json["cloudantNoSQLDB"][0].credentials.username;
+                            Configuration["cloudantNoSQLDB:0:credentials:password"] = json["cloudantNoSQLDB"][0].credentials.password;
+                            Configuration["cloudantNoSQLDB:0:credentials:host"] = json["cloudantNoSQLDB"][0].credentials.host;
+                            Configuration["cloudantNoSQLDB:0:credentials:url"] = json["cloudantNoSQLDB"][0].credentials.url;
                         }
                         catch (Exception)
                         {
@@ -88,46 +92,47 @@ public class Startup
         //// Add framework services.
         services.AddMvc();
 
-        var creds = new GetStartedDotnet.Models.Creds()
+        var creds = new Creds()
         {
             username = Configuration["cloudantNoSQLDB:0:credentials:username"],
             password = Configuration["cloudantNoSQLDB:0:credentials:password"],
             host = Configuration["cloudantNoSQLDB:0:credentials:host"]
         };
-        services.AddSingleton(typeof(GetStartedDotnet.Models.Creds), creds);
+        Console.WriteLine("HERE STARTUP" + Configuration["cloudantNoSQLDB:0:credentials:host"]);
+        services.AddSingleton(typeof(Creds), creds);
         services.AddTransient<ICloudantService, CloudantService>();
     }
 
-    private string getConnectionString(string databaseUri)
-    {
-        var connectionString = "";
-        try
-        {
-            string hostname;
-            string username;
-            string password;
-            string port;
-            string database;
-            username = databaseUri.Split('/')[2].Split(':')[0];
-            password = (databaseUri.Split(':')[2]).Split('@')[0];
-            var portSplit = databaseUri.Split(':');
-            port = portSplit.Length == 4 ? (portSplit[3]).Split('/')[0] : null;
-            var hostSplit = databaseUri.Split('@')[1];
-            hostname = port == null ? hostSplit.Split('/')[0] : hostSplit.Split(':')[0];
-            var databaseSplit = databaseUri.Split('/');
-            database = databaseSplit.Length == 4 ? databaseSplit[3] : null;
-            var optionsSplit = database.Split('?');
-            database = optionsSplit.First();
-            port = port ?? "3306"; // if port is null, use 3306
-            connectionString = $"Server={hostname};uid={username};pwd={password};Port={port};Database={database};SSL Mode=Required;";
-        }
-        catch (IndexOutOfRangeException ex)
-        {
-            throw new FormatException("Invalid database uri format", ex);
-        }
+    //private string getConnectionString(string databaseUri)
+    //{
+    //    var connectionString = "";
+    //    try
+    //    {
+    //        string hostname;
+    //        string username;
+    //        string password;
+    //        string port;
+    //        string database;
+    //        username = databaseUri.Split('/')[2].Split(':')[0];
+    //        password = (databaseUri.Split(':')[2]).Split('@')[0];
+    //        var portSplit = databaseUri.Split(':');
+    //        port = portSplit.Length == 4 ? (portSplit[3]).Split('/')[0] : null;
+    //        var hostSplit = databaseUri.Split('@')[1];
+    //        hostname = port == null ? hostSplit.Split('/')[0] : hostSplit.Split(':')[0];
+    //        var databaseSplit = databaseUri.Split('/');
+    //        database = databaseSplit.Length == 4 ? databaseSplit[3] : null;
+    //        var optionsSplit = database.Split('?');
+    //        database = optionsSplit.First();
+    //        port = port ?? "3306"; // if port is null, use 3306
+    //        connectionString = $"Server={hostname};uid={username};pwd={password};Port={port};Database={database};SSL Mode=Required;";
+    //    }
+    //    catch (IndexOutOfRangeException ex)
+    //    {
+    //        throw new FormatException("Invalid database uri format", ex);
+    //    }
 
-        return connectionString;
-    }
+    //    return connectionString;
+    //}
 
     public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
     {
@@ -144,8 +149,9 @@ public class Startup
             app.UseExceptionHandler("/Home/Error");
         }
 
-        var context = (app.ApplicationServices.GetService(typeof(VisitorsDbContext)) as VisitorsDbContext);
-        context?.Database.EnsureCreated();
+        //var context = (app.ApplicationServices.GetService(typeof(VisitorsDbContext)) as VisitorsDbContext);
+        var cloudantService = ((ICloudantService)app.ApplicationServices.GetService(typeof(ICloudantService)));
+        //context?.Database.EnsureCreated();
 
         app.UseStaticFiles();
 

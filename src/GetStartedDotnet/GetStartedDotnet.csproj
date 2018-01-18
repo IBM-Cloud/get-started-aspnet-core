@@ -42,6 +42,9 @@
     <Folder Include="Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Models\ToDoItem.cs" />
+  </ItemGroup>
   <Target Name="PrecompileScript" BeforeTargets="BeforeBuild;BeforePublish;">
     <Exec Command="dotnet bundle" />
   </Target>

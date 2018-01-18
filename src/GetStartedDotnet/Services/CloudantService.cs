@@ -6,12 +6,13 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq; //DELETE THIS
 
 namespace GetStartedDotnet.Services
 {
     public class CloudantService : ICloudantService
     {
-        private static readonly string _dbName = "todos";
+        private static readonly string _dbName = "mydb";
         private readonly Creds _cloudantCreds;
         private readonly UrlEncoder _urlEncoder;
 
@@ -29,7 +30,7 @@ namespace GetStartedDotnet.Services
                 if (response.IsSuccessStatusCode)
                 {
                     var responseJson = await response.Content.ReadAsAsync<Visitor>();
-                    return JsonConvert.SerializeObject(new { id = responseJson.id, rev = responseJson.rev });
+                    return JsonConvert.SerializeObject(new { id = responseJson.Id, name = responseJson.Name });
                 }
                 string msg = "Failure to POST. Status Code: " + response.StatusCode + ". Reason: " + response.ReasonPhrase;
                 Console.WriteLine(msg);
@@ -41,11 +42,11 @@ namespace GetStartedDotnet.Services
         {
             using (var client = CloudantClient())
             {
-                var response = await client.DeleteAsync(_dbName + "/" + _urlEncoder.Encode(item.id) + "?rev=" + _urlEncoder.Encode(item.rev));
+                var response = await client.DeleteAsync(_dbName + "/" + _urlEncoder.Encode(item.Id+"") + "?name=" + _urlEncoder.Encode(item.Name));
                 if (response.IsSuccessStatusCode)
                 {
                     var responseJson = await response.Content.ReadAsAsync<Visitor>();
-                    return JsonConvert.SerializeObject(new { id = responseJson.id, rev = responseJson.rev });
+                    return JsonConvert.SerializeObject(new { id = responseJson.Id, name = responseJson.Name });
                 }
                 string msg = "Failure to DELETE. Status Code: " + response.StatusCode + ". Reason: " + response.ReasonPhrase;
                 Console.WriteLine(msg);
@@ -72,11 +73,11 @@ namespace GetStartedDotnet.Services
         {
             using (var client = CloudantClient())
             {
-                var response = await client.PutAsJsonAsync(_dbName + "/" + _urlEncoder.Encode(item.id) + "?rev=" + _urlEncoder.Encode(item.rev), item);
+                var response = await client.PutAsJsonAsync(_dbName + "/" + _urlEncoder.Encode(item.Id+"") + "?name=" + _urlEncoder.Encode(item.Name), item);
                 if (response.IsSuccessStatusCode)
                 {
                     var responseJson = await response.Content.ReadAsAsync<Visitor>();
-                    return JsonConvert.SerializeObject(new { id = responseJson.id, rev = responseJson.rev });
+                    return JsonConvert.SerializeObject(new { id = responseJson.Id, name = responseJson.Name });
                 }
                 string msg = "Failure to PUT. Status Code: " + response.StatusCode + ". Reason: " + response.ReasonPhrase;
                 Console.WriteLine(msg);
@@ -110,6 +111,7 @@ namespace GetStartedDotnet.Services
 
         private HttpClient CloudantClient()
         {
+            Console.WriteLine("HERE SERVICE"+JObject.FromObject(_cloudantCreds));
             if (_cloudantCreds.username == null || _cloudantCreds.password == null || _cloudantCreds.host == null)
             {
                 throw new Exception("Missing Cloudant NoSQL DB service credentials");
