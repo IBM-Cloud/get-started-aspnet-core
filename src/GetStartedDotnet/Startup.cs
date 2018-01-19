@@ -98,7 +98,6 @@ public class Startup
             password = Configuration["cloudantNoSQLDB:0:credentials:password"],
             host = Configuration["cloudantNoSQLDB:0:credentials:host"]
         };
-        Console.WriteLine("HERE STARTUP" + Configuration["cloudantNoSQLDB:0:credentials:host"]);
         services.AddSingleton(typeof(Creds), creds);
         services.AddTransient<ICloudantService, CloudantService>();
     }
@@ -136,6 +135,8 @@ public class Startup
 
     public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
     {
+        var cloudantService = ((ICloudantService)app.ApplicationServices.GetService(typeof(ICloudantService)));
+
         loggerFactory.AddConsole(Configuration.GetSection("Logging"));
         loggerFactory.AddDebug();
 
@@ -150,7 +151,6 @@ public class Startup
         }
 
         //var context = (app.ApplicationServices.GetService(typeof(VisitorsDbContext)) as VisitorsDbContext);
-        var cloudantService = ((ICloudantService)app.ApplicationServices.GetService(typeof(ICloudantService)));
         //context?.Database.EnsureCreated();
 
         app.UseStaticFiles();

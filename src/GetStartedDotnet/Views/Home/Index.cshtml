@@ -35,11 +35,18 @@
         }
     });
 
-    //Retreive all the visitors from the database
+    //Retrieve all the visitors from the database
     function getNames() {
         $.get("/api/visitors")
             .done(function (data) {
                 if (data.length > 0) {
+                    var json = JSON.parse(data);
+                    var rows = json.rows;
+
+                    var names = rows.map(function(row){
+                                        return row.doc.Name;
+                                        });
+                    console.log(names);
                     $('#databaseNames').html("Database contents: " + JSON.stringify(data));
                 }
             });
