@@ -22,7 +22,7 @@ public class Startup
             .SetBasePath(env.ContentRootPath)
             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
             .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-            .AddJsonFile("vcap-local.json", optional:true); // when running locally, store VCAP_SERVICES credentials in vcap-local.json
+            .AddJsonFile("vcap-local.json", optional: true); // when running locally, store VCAP_SERVICES credentials in vcap-local.json
 
         Configuration = builder.Build();
 
@@ -30,7 +30,7 @@ public class Startup
         if (vcapServices != null)
         {
             dynamic json = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(vcapServices);
-            
+
             // CF 'cleardb' service
             if (json.ContainsKey("cleardb"))
             {
@@ -42,13 +42,13 @@ public class Startup
                 {
                     // Failed to read ClearDB uri, ignore this and continue without a database
                 }
-            } 
+            }
             // user-provided service with 'cleardb' in the name
-            else if (json.ContainsKey("user-provided")) 
+            else if (json.ContainsKey("user-provided"))
             {
-                foreach (var service in json["user-provided"]) 
+                foreach (var service in json["user-provided"])
                 {
-                    if (((String) service.name).Contains("cleardb")) 
+                    if (((String)service.name).Contains("cleardb"))
                     {
                         try
                         {
@@ -70,14 +70,14 @@ public class Startup
         if (!string.IsNullOrEmpty(databaseUri))
         {
             // add database context
-            services.AddDbContext<VisitorsDbContext>(options => options.UseMySQL(getConnectionString(databaseUri)));
+            services.AddDbContext<VisitorsDbContext>(options => options.UseMySQL(GetConnectionString(databaseUri)));
         }
-        
+
         // Add framework services.
         services.AddMvc();
     }
 
-    private string getConnectionString(string databaseUri)
+    private string GetConnectionString(string databaseUri)
     {
         var connectionString = "";
         try
