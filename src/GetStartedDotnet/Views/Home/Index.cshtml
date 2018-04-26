@@ -2,18 +2,43 @@
     ViewData["Title"] = "Hello World!";
 }
 
-<div class="container">
-    <h1>Welcome.</h1>
+<div class="container" id="container">
+    <h1 data-i18n="welcome"></h1> <!-- Welcome -->
     <div id="nameInput" class="input-group-lg center-block helloInput">
-        <p class="lead">What is your name?</p>
-        <input id="user_name" type="text" class="form-control" placeholder="name" aria-describedby="sizing-addon1" value="" />
+        <p class="lead" data-i18n="what_is_your_name"></p>
+        <input id="user_name" type="text" class="form-control" aria-describedby="sizing-addon1" value="" />
     </div>
     <p id="response" class="lead text-center"></p>
 
     <p id="databaseNames" class="lead text-center"></p>
 </div>
 
+
 @section scripts {
+<script>
+$( document ).ready(function() {
+    $.i18n().load( {
+        en: {
+            "welcome": "Welcome.",
+            "name": "name",
+            "what_is_your_name": "What is your name?",
+            "hello": "Hello $1",
+            "added_to_database": "Hello $1, I've added you to the database!",
+            "database_contents": "Database contents: "
+        },
+        ja: {
+            "welcome": "ようこそ。",
+            "name": "名前",
+            "what_is_your_name": "お名前を教えてください。",
+            "hello": "こんにちは $1",
+            "added_to_database": "こんにちは $1 さん、あなたをデータベースに追加しました。",
+            "database_contents": "データベースの内容: "
+        }
+    } );
+    $('body').i18n();
+    $('#user_name').attr("placeholder", $.i18n('name') );
+});
+</script>
 <script>
     //Submit data when enter key is pressed
     $('#user_name').keydown(function (e) {
@@ -29,21 +54,21 @@
                 data: JSON.stringify({ name: name })
             })
                 .done(function (data) {
-                    $('#response').html(data);
+                    $('#response').html($.i18n('hello', data)); 
                     getNames();
                 });
         }
     });
 
     //Retreive all the visitors from the database
-    function getNames() {
+    function getNames(){
         $.get("/api/visitors")
-            .done(function (data) {
-                if (data.length > 0) {
-                    $('#databaseNames').html("Database contents: " + JSON.stringify(data));
+            .done(function(data) {
+                if(data.length > 0) {
+                    $('#databaseNames').html($.i18n('database_contents') + JSON.stringify(data));
                 }
             });
-    }
+        }
 
     //Call getNames on page load.
     getNames();

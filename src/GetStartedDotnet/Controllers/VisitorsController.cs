@@ -26,7 +26,7 @@ namespace GetStartedDotnet.Controllers
         {
             if (_dbContext == null)
             {
-                return new string[] { "No database connection" };
+                return new string[] { };
             }
             else
             {
@@ -44,7 +44,7 @@ namespace GetStartedDotnet.Controllers
                 _dbContext.SaveChanges();
             }
 
-            return new string[] { _htmlEncoder.Encode("Hello " + visitor.Name) };
+            return new string[] { _htmlEncoder.Encode(visitor.Name) };
         }
     }
 }
