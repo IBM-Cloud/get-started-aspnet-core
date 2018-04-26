@@ -1,0 +1,10 @@
+{
+    "cleardb": [
+     {
+       "credentials": {
+         "uri": "mysql://Username:Password@hostname.cleardb.net:3306/database_name?reconnect=true",
+       },
+       "name": "My ClearDB service instance name"
+     }
+    ]
+}
