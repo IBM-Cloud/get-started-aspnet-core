@@ -12,4 +12,4 @@ The following steps are the general procedure to set up and deploy your app. See
 
 ## Before you begin
 
-You'll need a [IBM Cloud account](https://console.ng.bluemix.net/registration/), [Git](https://git-scm.com/downloads) [Cloud Foundry CLI](https://github.com/cloudfoundry/cli#downloads) and .NET Core SDK v1.0.4 from the [dot.net website](https://www.microsoft.com/net/download/core)
+You'll need a [IBM Cloud account](https://console.ng.bluemix.net/registration/), [Git](https://git-scm.com/downloads) [Cloud Foundry CLI](https://github.com/cloudfoundry/cli#downloads) and .NET Core SDK v2.1.3 from the [dot.net website](https://www.microsoft.com/net/download/dotnet-core/2.1)
