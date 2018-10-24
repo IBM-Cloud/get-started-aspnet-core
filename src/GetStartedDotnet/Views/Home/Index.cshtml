@@ -40,14 +40,15 @@
         $.get("/api/visitors")
             .done(function (data) {
                 if (data.length > 0) {
+                    console.log(data);
                     var json = JSON.parse(data);
                     var rows = json.rows;
-
+                    console.log(json);
                     var names = rows.map(function(row){
                                         return row.doc.Name;
                                         });
                     console.log(names);
-                    $('#databaseNames').html("Database contents: " + JSON.stringify(data));
+                    $('#databaseNames').html("Database contents: " + JSON.stringify(names));
                 }
             });
     }

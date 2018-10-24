@@ -9,7 +9,6 @@ using System;
 using Newtonsoft.Json;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using MySql.Data.EntityFrameworkCore.Extensions;
 using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq; //DELETE THIS

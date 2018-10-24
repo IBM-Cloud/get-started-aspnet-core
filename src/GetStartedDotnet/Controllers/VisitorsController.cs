@@ -53,7 +53,7 @@ namespace GetStartedDotnet.Controllers
                 await _cloudantService.CreateAsync(visitor);
             }
 
-            return new string[] { _htmlEncoder.Encode("Hello " + visitor.Name) };
+            return new string[] {"Hello " + visitor.Name};
         }
     }
 }

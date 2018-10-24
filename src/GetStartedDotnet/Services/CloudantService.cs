@@ -15,31 +15,37 @@ namespace GetStartedDotnet.Services
         private static readonly string _dbName = "mydb";
         private readonly Creds _cloudantCreds;
         private readonly UrlEncoder _urlEncoder;
+        private HttpClient client;
 
         public CloudantService(Creds creds, UrlEncoder urlEncoder)
         {
             _cloudantCreds = creds;
             _urlEncoder = urlEncoder;
+            client = CloudantClient();
         }
 
         public async Task<dynamic> CreateAsync(Visitor item)
         {
-            using (var client = CloudantClient())
-            {
-                //verify if the DB has been created
-                var initialResponse = await client.GetAsync(_dbName);
-                if(!initialResponse.IsSuccessStatusCode)
-                {
-                    initialResponse = await client.PutAsync(_dbName, null);
-                    if (!initialResponse.IsSuccessStatusCode)
-                    {
-                        throw new Exception("Failed to create database " + _dbName + ". Status Code: " + initialResponse.StatusCode + ". Reason: " + initialResponse.ReasonPhrase);
-                    }
+            //using (var client = CloudantClient())
+            //{
+            //verify if the DB has been created
+            //var initialResponse = await client.GetAsync(_dbName);
+            //if(!initialResponse.IsSuccessStatusCode)
+            //{
+            //    initialResponse = await client.PutAsync(_dbName, null);
+            //    if (!initialResponse.IsSuccessStatusCode)
+            //    {
+            //        throw new Exception("Failed to create database " + _dbName + ". Status Code: " + initialResponse.StatusCode + ". Reason: " + initialResponse.ReasonPhrase);
+            //    }
 
-                }
+            //}
 
-                var response = await client.PostAsJsonAsync(_dbName, item);
-                if (response.IsSuccessStatusCode)
+                string jsonInString = JsonConvert.SerializeObject(item);
+
+                //var response = await client.PostAsJsonAsync(_dbName, item);
+                var response = await client.PostAsync("https://" + _cloudantCreds.host, new StringContent(jsonInString, Encoding.UTF8, "application/json"));
+
+                if(response.IsSuccessStatusCode)
                 {
                     var responseJson = await response.Content.ReadAsAsync<Visitor>();
                     return JsonConvert.SerializeObject(new { id = responseJson.Id, name = responseJson.Name });
@@ -47,7 +53,7 @@ namespace GetStartedDotnet.Services
                 string msg = "Failure to POST. Status Code: " + response.StatusCode + ". Reason: " + response.ReasonPhrase;
                 Console.WriteLine(msg);
                 return JsonConvert.SerializeObject(new { msg = "Failure to POST. Status Code: " + response.StatusCode + ". Reason: " + response.ReasonPhrase });
-            }
+            //}
         }
 
         //public async Task<dynamic> DeleteAsync(Visitor item)
@@ -68,20 +74,22 @@ namespace GetStartedDotnet.Services
 
         public async Task<dynamic> GetAllAsync()
         {
-            using (var client = CloudantClient())
-            {
+            //using (var client = CloudantClient())
+            //{
                 var response = await client.GetAsync(_dbName + "/_all_docs?include_docs=true");
                 if (response.IsSuccessStatusCode)
                 {
-                    //dynamic json = await response.Content.ReadAsFormDataAsync();
-                    //Console.WriteLine("TESTING" + JObject.FromObject(json));
-                    //return json; 
+                    // dynamic json = await response.Content.ReadAsAsync<Visitor>();
+                    // Console.WriteLine("TESTING" + json);
+                    // return json; 
+                    // Task<string> value = response.Content.ReadAsStringAsync();
+                    // return JsonConvert.SerializeObject(await value);
                     return await response.Content.ReadAsStringAsync();
                 }
                 string msg = "Failure to GET. Status Code: " + response.StatusCode + ". Reason: " + response.ReasonPhrase;
                 Console.WriteLine(msg);
                 return JsonConvert.SerializeObject(new { msg = msg });
-            }
+            //}
         }
 
         //public async Task<string> UpdateAsync(Visitor item)
