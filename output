@@ -888,3 +888,5 @@ Retrieving logs for app [36;1mGetStartedDotnet[0m in org [36;1mnelson.alemar.
    2018-10-23T11:21:38.82-0400 [APP/PROC/WEB/0] OUT       Request finished in 443.9776ms 404 
    2018-10-23T11:21:38.82-0400 [RTR/1] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-23T15:21:38.369+0000] "POST /api/visitors HTTP/1.1" 404 15 0 "https://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.188.42.212:15513" "169.60.82.180:61138" x_forwarded_for:"24.48.214.20, 10.188.42.212" x_forwarded_proto:"https" vcap_request_id:"97c11094-4787-4536-65ca-7a7c9f17cc16" response_time:0.452349851 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"594025375" true_client_ip:"-" x_b3_traceid:"32c428054a49030e" x_b3_spanid:"32c428054a49030e" x_b3_parentspanid:"-"
    2018-10-23T11:21:38.82-0400 [RTR/1] OUT 
+Retrieving logs for app [36;1mGetStartedDotnet[0m in org [36;1mnelson.alemar.alonso@ibm.com[0m / space [36;1mdev[0m as [36;1mnelson.alemar.alonso@ibm.com[0m...
+
