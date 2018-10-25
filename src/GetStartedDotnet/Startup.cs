@@ -84,7 +84,6 @@ public class Startup
     {
         // Add framework services.
 
-        services.AddAuthorization();
 
         var creds = new Creds()
         {
@@ -93,25 +92,25 @@ public class Startup
             host = Configuration["cloudantNoSQLDB:0:credentials:host"]
         };
 
-        services.AddSingleton(typeof(Creds), creds);
-        services.AddTransient<ICloudantService, CloudantService>();
-        services.AddTransient<LoggingHandler>();
-        services.AddHttpClient("cloudant", client =>
+        if (creds.username != null && creds.password != null && creds.host != null)
         {
-            Console.WriteLine("HERE SERVICE" + JObject.FromObject(creds));
-            if (creds.username == null || creds.password == null || creds.host == null)
+            services.AddAuthorization();
+            services.AddSingleton(typeof(Creds), creds);
+            services.AddTransient<ICloudantService, CloudantService>();
+            services.AddTransient<LoggingHandler>();
+            services.AddHttpClient("cloudant", client =>
             {
-                throw new Exception("Missing Cloudant NoSQL DB service credentials");
-            }
+                Console.WriteLine("HERE SERVICE" + JObject.FromObject(creds));
 
-            var auth = Convert.ToBase64String(Encoding.ASCII.GetBytes(creds.username + ":" + creds.password));
+                var auth = Convert.ToBase64String(Encoding.ASCII.GetBytes(creds.username + ":" + creds.password));
 
-            client.BaseAddress = new Uri("https://" + creds.host);
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", auth);
-        })
-        .AddHttpMessageHandler<LoggingHandler>();
+                client.BaseAddress = new Uri("https://" + creds.host);
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", auth);
+            })
+            .AddHttpMessageHandler<LoggingHandler>();
+        }
 
         services.AddMvc();
         
