@@ -1,0 +1,892 @@
+Retrieving logs for app [36;1mGetStartedDotnet[0m in org [36;1mnelson.alemar.alonso@ibm.com[0m / space [36;1mdev[0m as [36;1mnelson.alemar.alonso@ibm.com[0m...
+
+   2018-10-19T02:37:50.79-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+   2018-10-19T02:37:50.79-0400 [APP/PROC/WEB/0] OUT       Request starting HTTP/1.1 GET http://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/  
+   2018-10-19T02:38:01.75-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+   2018-10-19T02:38:01.76-0400 [RTR/3] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-19T06:37:50.649+0000] "GET / HTTP/1.1" 200 0 2781 "https://console.bluemix.net/services/cloudantnosqldb/9fc42de6-e053-4d5f-b23a-e0e9619f83f0?paneId=connectedObjects&ace_config=%7B%22region%22%3A%22us-east%22%2C%22orgGuid%22%3A%22bf7ff873-e086-40b7-9f16-e20638b29ea2%22%2C%22spaceGuid%22%3A%2220a666f2-e77f-435d-9abd-a4c67462a2ab%22%2C%22redirect%22%3A%22https%3A%2F%2Fconsole.bluemix.net%2Fdashboard%2Fapps%3Fenv_id%3Dibm%253Ayp%253Aus-east%22%2C%22bluemixUIVersion%22%3A%22v6%22%2C%22crn%22%3A%22crn%3Av1%3Abluemix%3Apublic%3Acloudantnosqldb%3Aus-east%3As%2F20a666f2-e77f-435d-9abd-a4c67462a2ab%3A9fc42de6-e053-4d5f-b23a-e0e9619f83f0%3Acf-service-instance%3A%22%7D&env_id=ibm%3Ayp%3Aus-east" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.188.42.210:31201" "169.60.82.183:61042" x_forwarded_for:"70.45.220.69, 10.188.42.210" x_forwarded_proto:"https" vcap_request_id:"b1a06382-16b5-4fd5-71e8-11fa6aba6fc3" response_time:11.11723143 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"136930305" true_client_ip:"-" x_b3_traceid:"2daba84214e0c633" x_b3_spanid:"2daba84214e0c633" x_b3_parentspanid:"-"
+   2018-10-19T02:38:01.76-0400 [RTR/3] OUT 
+   2018-10-19T02:38:02.50-0400 [APP/PROC/WEB/0] OUT   "username": "1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix",
+   2018-10-19T02:38:02.50-0400 [APP/PROC/WEB/0] OUT   "password": "383a8bd6de7107d0aaa4a6c53dc6f42c9623028a93e8213dd5cddc72b4d9fea6",
+   2018-10-19T02:38:02.50-0400 [APP/PROC/WEB/0] OUT   "host": "1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix.cloudant.com"
+   2018-10-19T02:38:02.50-0400 [APP/PROC/WEB/0] OUT }
+   2018-10-19T02:38:02.52-0400 [APP/PROC/WEB/0] OUT GET	https://1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix.cloudant.com/mydb/_all_docs?include_docs=true
+   2018-10-19T02:38:02.61-0400 [APP/PROC/WEB/0] OUT OK
+   2018-10-19T02:38:18.74-0400 [APP/PROC/WEB/0] OUT       Request starting HTTP/1.1 POST http://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/api/visitors application/json 21
+   2018-10-19T02:38:19.87-0400 [RTR/3] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-19T06:38:18.733+0000] "POST /api/visitors HTTP/1.1" 404 21 0 "https://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.65.22.211:10714" "169.60.82.183:61042" x_forwarded_for:"70.45.220.69, 10.65.22.211" x_forwarded_proto:"https" vcap_request_id:"a57a99b6-9a26-4e01-7850-e5b7fb5f8efe" response_time:1.139269769 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"664871967" true_client_ip:"-" x_b3_traceid:"0c16c547558b3758" x_b3_spanid:"0c16c547558b3758" x_b3_parentspanid:"-"
+   2018-10-19T02:38:19.87-0400 [RTR/3] OUT 
+   2018-10-19T02:38:27.89-0400 [RTR/0] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-19T06:38:27.870+0000] "GET / HTTP/1.1" 200 0 2781 "https://console.bluemix.net/services/cloudantnosqldb/9fc42de6-e053-4d5f-b23a-e0e9619f83f0?paneId=connectedObjects&ace_config=%7B%22region%22%3A%22us-east%22%2C%22orgGuid%22%3A%22bf7ff873-e086-40b7-9f16-e20638b29ea2%22%2C%22spaceGuid%22%3A%2220a666f2-e77f-435d-9abd-a4c67462a2ab%22%2C%22redirect%22%3A%22https%3A%2F%2Fconsole.bluemix.net%2Fdashboard%2Fapps%3Fenv_id%3Dibm%253Ayp%253Aus-east%22%2C%22bluemixUIVersion%22%3A%22v6%22%2C%22crn%22%3A%22crn%3Av1%3Abluemix%3Apublic%3Acloudantnosqldb%3Aus-east%3As%2F20a666f2-e77f-435d-9abd-a4c67462a2ab%3A9fc42de6-e053-4d5f-b23a-e0e9619f83f0%3Acf-service-instance%3A%22%7D&env_id=ibm%3Ayp%3Aus-east" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.65.22.211:40191" "169.60.82.183:61042" x_forwarded_for:"70.45.220.69, 10.65.22.211" x_forwarded_proto:"https" vcap_request_id:"ad080d10-79dc-411f-67db-ef7a008bca85" response_time:0.026562762 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"345687729" true_client_ip:"-" x_b3_traceid:"84109842f749bc3e" x_b3_spanid:"84109842f749bc3e" x_b3_parentspanid:"-"
+   2018-10-19T02:38:27.89-0400 [RTR/0] OUT 
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>d__6.MoveNext()
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+   2018-10-19T02:38:28.25-0400 [APP/PROC/WEB/0] OUT       Request finished in 133.406ms 404 
+   2018-10-19T02:38:28.25-0400 [RTR/3] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-19T06:38:28.117+0000] "GET /api/visitors HTTP/1.1" 404 0 0 "https://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.65.22.211:10715" "169.60.82.183:61042" x_forwarded_for:"70.45.220.69, 10.65.22.211" x_forwarded_proto:"https" vcap_request_id:"2d264abc-ffbf-44c3-5bec-f5d29bae55f8" response_time:0.137666179 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"57329283" true_client_ip:"-" x_b3_traceid:"ce60e7c18175f7a2" x_b3_spanid:"ce60e7c18175f7a2" x_b3_parentspanid:"-"
+   2018-10-19T02:38:28.25-0400 [RTR/3] OUT 
+   2018-10-19T02:39:55.87-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+   2018-10-19T02:39:55.87-0400 [APP/PROC/WEB/0] OUT       Request starting HTTP/1.1 GET http://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/  
+   2018-10-19T02:39:55.87-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+   2018-10-19T02:39:55.87-0400 [APP/PROC/WEB/0] OUT       Executing action method GetStartedDotnet.Controllers.HomeController.Index (GetStartedDotnet) with arguments ((null)) - ModelState is Valid
+   2018-10-19T02:39:55.87-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor[1]
+   2018-10-19T02:39:55.87-0400 [APP/PROC/WEB/0] OUT       Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+   2018-10-19T02:39:55.87-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+   2018-10-19T02:39:55.87-0400 [APP/PROC/WEB/0] OUT       Executed action GetStartedDotnet.Controllers.HomeController.Index (GetStartedDotnet) in 1.7589ms
+   2018-10-19T02:39:55.87-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+   2018-10-19T02:39:55.87-0400 [APP/PROC/WEB/0] OUT       Request finished in 1.9925ms 200 text/html; charset=utf-8
+   2018-10-19T02:39:55.98-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+   2018-10-19T02:39:55.98-0400 [APP/PROC/WEB/0] OUT       Request starting HTTP/1.1 GET http://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/js/site.min.js  
+   2018-10-19T02:39:55.98-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+   2018-10-19T02:39:55.98-0400 [APP/PROC/WEB/0] OUT       Request finished in 0.3643ms 404 
+   2018-10-19T02:39:56.12-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+   2018-10-19T02:39:56.12-0400 [APP/PROC/WEB/0] OUT       Request starting HTTP/1.1 GET http://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/api/visitors  
+   2018-10-19T02:39:56.12-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+   2018-10-19T02:39:56.12-0400 [APP/PROC/WEB/0] OUT       Executing action method GetStartedDotnet.Controllers.VisitorsController.Get (GetStartedDotnet) with arguments ((null)) - ModelState is Valid
+   2018-10-19T02:39:56.12-0400 [APP/PROC/WEB/0] OUT HERE SERVICE{
+   2018-10-19T02:39:56.12-0400 [APP/PROC/WEB/0] OUT   "username": "1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix",
+   2018-10-19T02:39:56.12-0400 [APP/PROC/WEB/0] OUT   "password": "383a8bd6de7107d0aaa4a6c53dc6f42c9623028a93e8213dd5cddc72b4d9fea6",
+   2018-10-19T02:39:56.12-0400 [APP/PROC/WEB/0] OUT   "host": "1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix.cloudant.com"
+   2018-10-19T02:39:56.12-0400 [APP/PROC/WEB/0] OUT }
+   2018-10-19T02:39:56.12-0400 [APP/PROC/WEB/0] OUT GET	https://1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix.cloudant.com/mydb/_all_docs?include_docs=true
+   2018-10-19T02:39:56.16-0400 [APP/PROC/WEB/0] OUT OK
+   2018-10-19T02:39:56.16-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+   2018-10-19T02:39:56.16-0400 [APP/PROC/WEB/0] OUT       Executed action GetStartedDotnet.Controllers.VisitorsController.Get (GetStartedDotnet) in 42.7513ms
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT [41m[30mfail[39m[22m[49m: Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware[0]
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT       An unhandled exception has occurred: No MediaTypeFormatter is available to read an object of type 'FormDataCollection' from content with media type 'application/json'.
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT System.Net.Http.UnsupportedMediaTypeException: No MediaTypeFormatter is available to read an object of type 'FormDataCollection' from content with media type 'application/json'.
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Net.Http.HttpContentFormDataExtensions.<ReadAsAsyncCore>d__4.MoveNext()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at GetStartedDotnet.Services.CloudantService.<GetAllAsync>d__5.MoveNext() in /tmp/app/src/GetStartedDotnet/Services/CloudantService.cs:line 76
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at GetStartedDotnet.Controllers.VisitorsController.<Get>d__3.MoveNext() in /tmp/app/src/GetStartedDotnet/Controllers/VisitorsController.cs:line 37
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at lambda_method(Closure , Object )
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>d__6.MoveNext()
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+   2018-10-19T02:39:56.17-0400 [APP/PROC/WEB/0] OUT       Request finished in 47.5687ms 404 
+   2018-10-19T03:32:02.83-0400 [CELL/0] OUT Cell ad18cf6e-82a6-4ee3-91a9-782d3cc500c4 stopping instance aafc1572-876f-4d99-6d4c-390f
+   2018-10-19T03:32:02.83-0400 [API/11] OUT Updated app with guid c747c377-ec24-4647-9579-88bb34fcc74d ({"state"=>"STOPPED"})
+   2018-10-19T03:32:02.84-0400 [CELL/SSHD/0] OUT Exit status 0
+   2018-10-19T03:32:04.14-0400 [API/10] OUT Creating build for app with guid c747c377-ec24-4647-9579-88bb34fcc74d
+   2018-10-19T03:32:05.25-0400 [API/10] OUT Updated app with guid c747c377-ec24-4647-9579-88bb34fcc74d ({"state"=>"STARTED"})
+   2018-10-19T03:32:13.84-0400 [CELL/0] OUT Cell ad18cf6e-82a6-4ee3-91a9-782d3cc500c4 destroying container for instance aafc1572-876f-4d99-6d4c-390f
+   2018-10-19T03:32:14.81-0400 [PROXY/0] OUT Exit status 137
+   2018-10-19T03:32:14.90-0400 [CELL/0] OUT Cell ad18cf6e-82a6-4ee3-91a9-782d3cc500c4 successfully destroyed container for instance aafc1572-876f-4d99-6d4c-390f
+   2018-10-19T03:32:29.99-0400 [STG/0] OUT          Installing Microsoft.Extensions.Configuration.Binder 2.0.0.
+   2018-10-19T03:32:29.99-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.StaticFiles 2.0.0.
+   2018-10-19T03:32:29.99-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Routing.Abstractions 2.0.0.
+   2018-10-19T03:32:29.99-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Rewrite 2.0.0.
+   2018-10-19T03:32:29.99-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Hosting.Abstractions 2.0.0.
+   2018-10-19T03:32:29.99-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Hosting.Server.Abstractions 2.0.0.
+   2018-10-19T03:32:29.99-0400 [STG/0] OUT          Installing Microsoft.Extensions.Options.ConfigurationExtensions 2.0.0.
+   2018-10-19T03:32:30.00-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.Razor.Extensions 2.0.0.
+   2018-10-19T03:32:30.00-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.DataProtection.Extensions 2.0.0.
+   2018-10-19T03:32:30.00-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.ApiExplorer 2.0.0.
+   2018-10-19T03:32:30.00-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.DataProtection.Abstractions 2.0.0.
+   2018-10-19T03:32:30.00-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.Localization 2.0.0.
+   2018-10-19T03:32:30.00-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.Razor.ViewCompilation 2.0.0.
+   2018-10-19T03:32:30.00-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.Formatters.Json 2.0.0.
+   2018-10-19T03:32:30.00-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.SpaServices 2.0.0.
+   2018-10-19T03:32:30.00-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Session 2.0.0.
+   2018-10-19T03:32:30.00-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Identity.EntityFrameworkCore 2.0.0.
+   2018-10-19T03:32:30.00-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Http.Features 2.0.0.
+   2018-10-19T03:32:30.00-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Identity 2.0.0.
+   2018-10-19T03:32:30.00-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.MiddlewareAnalysis 2.0.0.
+   2018-10-19T03:32:30.00-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Localization 2.0.0.
+   2018-10-19T03:32:30.00-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 2.0.0.
+   2018-10-19T03:32:30.00-0400 [STG/0] OUT          Installing Microsoft.Extensions.DependencyInjection 2.0.0.
+   2018-10-19T03:32:30.00-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.HttpOverrides 2.0.0.
+   2018-10-19T03:32:30.33-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.ResponseCaching.Abstractions 2.0.0.
+   2018-10-19T03:32:30.33-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Cors 2.0.0.
+   2018-10-19T03:32:30.34-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Localization.Routing 2.0.0.
+   2018-10-19T03:32:30.34-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc 2.0.0.
+   2018-10-19T03:32:30.34-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.MicrosoftAccount 2.0.0.
+   2018-10-19T03:32:30.34-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.Abstractions 2.0.0.
+   2018-10-19T03:32:30.34-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.Formatters.Xml 2.0.0.
+   2018-10-19T03:32:30.35-0400 [STG/0] OUT          Installing System.Threading.ThreadPool 4.3.0.
+   2018-10-19T03:32:30.35-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Cryptography.Internal 2.0.0.
+   2018-10-19T03:32:30.35-0400 [STG/0] OUT          Installing Microsoft.IdentityModel.Protocols 2.1.4.
+   2018-10-19T03:32:30.35-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.ResponseCompression 2.0.0.
+   2018-10-19T03:32:30.35-0400 [STG/0] OUT          Installing Microsoft.ApplicationInsights 2.4.0.
+   2018-10-19T03:32:30.35-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.CookiePolicy 2.0.0.
+   2018-10-19T03:32:30.35-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Diagnostics.Abstractions 2.0.0.
+   2018-10-19T03:32:30.36-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.Twitter 2.0.0.
+   2018-10-19T03:32:30.36-0400 [STG/0] OUT          Installing Microsoft.ApplicationInsights.DependencyCollector 2.4.1.
+   2018-10-19T03:32:30.36-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Http 2.0.0.
+   2018-10-19T03:32:30.36-0400 [STG/0] OUT          Installing Microsoft.Extensions.Logging.Debug 2.0.0.
+   2018-10-19T03:32:30.36-0400 [STG/0] OUT          Installing System.Net.NameResolution 4.3.0.
+   2018-10-19T03:32:30.36-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.AzureAppServicesIntegration 2.0.0.
+   2018-10-19T03:32:30.37-0400 [STG/0] OUT          Installing Microsoft.Extensions.WebEncoders 2.0.0.
+   2018-10-19T03:32:30.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Http.Abstractions 2.0.0.
+   2018-10-19T03:32:30.37-0400 [STG/0] OUT          Installing System.Text.Encodings.Web 4.3.1.
+   2018-10-19T03:32:30.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Html.Abstractions 2.0.0.
+   2018-10-19T03:32:30.38-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.WebUtilities 2.0.0.
+   2018-10-19T03:32:30.38-0400 [STG/0] OUT          Installing Microsoft.Azure.KeyVault.WebKey 2.0.7.
+   2018-10-19T03:32:30.38-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Hosting 2.0.0.
+   2018-10-19T03:32:30.38-0400 [STG/0] OUT          Installing Microsoft.Rest.ClientRuntime 2.3.8.
+   2018-10-19T03:32:30.38-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Diagnostics 2.0.0.
+   2018-10-19T03:32:30.38-0400 [STG/0] OUT          Installing Microsoft.Rest.ClientRuntime.Azure 3.3.7.
+   2018-10-19T03:32:30.39-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Cryptography.KeyDerivation 2.0.0.
+   2018-10-19T03:32:30.39-0400 [STG/0] OUT          Installing System.Runtime.Serialization.Json 4.0.2.
+   2018-10-19T03:32:32.74-0400 [STG/0] OUT          Restore completed in 8.82 sec for /tmp/app/src/GetStartedDotnet/GetStartedDotnet.csproj.
+   2018-10-19T03:32:41.52-0400 [STG/0] OUT          Installing runtime.ubuntu.14.04-x64.runtime.native.System.Net.Security 4.3.0.
+   2018-10-19T03:32:41.70-0400 [STG/0] OUT          Installing runtime.linux-x64.Microsoft.NETCore.DotNetHostPolicy 2.0.6.
+   2018-10-19T03:32:50.25-0400 [STG/0] OUT          GetStartedDotnet -> /tmp/contents926058826/deps/0/dotnet_publish/
+   2018-10-19T03:33:01.18-0400 [API/10] OUT Creating droplet for app with guid c747c377-ec24-4647-9579-88bb34fcc74d
+   2018-10-19T03:33:08.58-0400 [STG/0] OUT Cell 9fc22c01-3b3f-4579-9130-18f501b577d1 stopping instance b55cbc5d-3d7e-47d7-a196-ce56e4d073d1
+   2018-10-19T03:33:08.58-0400 [STG/0] OUT Cell 9fc22c01-3b3f-4579-9130-18f501b577d1 destroying container for instance b55cbc5d-3d7e-47d7-a196-ce56e4d073d1
+   2018-10-19T03:34:40.62-0400 [RTR/3] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-19T07:34:40.605+0000] "GET /js/site.min.js HTTP/1.1" 404 0 0 "https://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.65.22.210:11344" "169.61.87.67:61178" x_forwarded_for:"70.45.220.69, 10.65.22.210" x_forwarded_proto:"https" vcap_request_id:"d860452f-c074-4529-779c-3ab2a75c91a7" response_time:0.019437604 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"417973511" true_client_ip:"-" x_b3_traceid:"9a6b9535399464ff" x_b3_spanid:"9a6b9535399464ff" x_b3_parentspanid:"-"
+   2018-10-19T03:34:40.62-0400 [RTR/3] OUT 
+   2018-10-19T03:34:40.99-0400 [RTR/0] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-19T07:34:40.732+0000] "GET /api/visitors HTTP/1.1" 404 0 0 "https://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.65.22.210:14549" "169.61.87.67:61178" x_forwarded_for:"70.45.220.69, 10.65.22.210" x_forwarded_proto:"https" vcap_request_id:"74ca00c3-799a-4ec1-77b5-fc19d76f89f6" response_time:0.267190715 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"471488909" true_client_ip:"-" x_b3_traceid:"a8eaf2b95196e8a0" x_b3_spanid:"a8eaf2b95196e8a0" x_b3_parentspanid:"-"
+   2018-10-19T03:34:40.99-0400 [RTR/0] OUT 
+   2018-10-19T03:35:00.04-0400 [RTR/0] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-19T07:34:59.586+0000] "POST /api/visitors HTTP/1.1" 404 21 0 "https://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.65.22.210:14565" "169.61.87.67:61178" x_forwarded_for:"70.45.220.69, 10.65.22.210" x_forwarded_proto:"https" vcap_request_id:"be481198-46c8-490e-49cd-98d0b131c045" response_time:0.456907889 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"353835281" true_client_ip:"-" x_b3_traceid:"d20dd8d4943196a7" x_b3_spanid:"d20dd8d4943196a7" x_b3_parentspanid:"-"
+   2018-10-19T03:35:00.04-0400 [RTR/0] OUT 
+   2018-10-19T03:35:01.76-0400 [RTR/0] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-19T07:35:01.754+0000] "GET / HTTP/1.1" 200 0 2781 "https://console.bluemix.net/services/cloudantnosqldb/9fc42de6-e053-4d5f-b23a-e0e9619f83f0?paneId=connectedObjects&ace_config=%7B%22region%22%3A%22us-east%22%2C%22orgGuid%22%3A%22bf7ff873-e086-40b7-9f16-e20638b29ea2%22%2C%22spaceGuid%22%3A%2220a666f2-e77f-435d-9abd-a4c67462a2ab%22%2C%22redirect%22%3A%22https%3A%2F%2Fconsole.bluemix.net%2Fdashboard%2Fapps%3Fenv_id%3Dibm%253Ayp%253Aus-east%22%2C%22bluemixUIVersion%22%3A%22v6%22%2C%22crn%22%3A%22crn%3Av1%3Abluemix%3Apublic%3Acloudantnosqldb%3Aus-east%3As%2F20a666f2-e77f-435d-9abd-a4c67462a2ab%3A9fc42de6-e053-4d5f-b23a-e0e9619f83f0%3Acf-service-instance%3A%22%7D&env_id=ibm%3Ayp%3Aus-east" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.65.22.210:14691" "169.61.87.67:61178" x_forwarded_for:"70.45.220.69, 10.65.22.210" x_forwarded_proto:"https" vcap_request_id:"706cacf7-1fa7-4ea4-5cce-3e00a4d206d3" response_time:0.008802808 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"417987623" true_client_ip:"-" x_b3_traceid:"707d0f02e1bc39e6" x_b3_spanid:"707d0f02e1bc39e6" x_b3_parentspanid:"-"
+   2018-10-19T03:35:01.76-0400 [RTR/0] OUT 
+   2018-10-19T03:35:01.86-0400 [RTR/3] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-19T07:35:01.858+0000] "GET /js/site.min.js HTTP/1.1" 404 0 0 "https://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.65.22.210:11274" "169.61.87.67:61178" x_forwarded_for:"70.45.220.69, 10.65.22.210" x_forwarded_proto:"https" vcap_request_id:"6645d8ee-fbe0-44e8-620a-d1c8dfb6b462" response_time:0.003043599 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"353848305" true_client_ip:"-" x_b3_traceid:"3fca4ddd6a3a5d8c" x_b3_spanid:"3fca4ddd6a3a5d8c" x_b3_parentspanid:"-"
+   2018-10-19T03:35:01.86-0400 [RTR/3] OUT 
+   2018-10-19T03:35:02.04-0400 [RTR/3] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-19T07:35:02.015+0000] "GET /api/visitors HTTP/1.1" 404 0 0 "https://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.65.22.210:11410" "169.61.87.67:61178" x_forwarded_for:"70.45.220.69, 10.65.22.210" x_forwarded_proto:"https" vcap_request_id:"ca648672-10f1-4038-457f-e5536056c944" response_time:0.026960989 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"682166335" true_client_ip:"-" x_b3_traceid:"25adb672aba4c5f1" x_b3_spanid:"25adb672aba4c5f1" x_b3_parentspanid:"-"
+   2018-10-19T03:35:02.04-0400 [RTR/3] OUT 
+   2018-10-19T03:45:18.36-0400 [API/4] OUT Updated app with guid c747c377-ec24-4647-9579-88bb34fcc74d ({"name"=>"GetStartedDotnet", "memory"=>512, "environment_json"=>"PRIVATE DATA HIDDEN"})
+   2018-10-19T03:45:24.84-0400 [API/2] OUT Uploading bits for app with guid c747c377-ec24-4647-9579-88bb34fcc74d
+   2018-10-19T03:45:31.40-0400 [API/2] OUT Updated app with guid c747c377-ec24-4647-9579-88bb34fcc74d ({"state"=>"STOPPED"})
+   2018-10-19T03:45:33.18-0400 [API/5] OUT Updated app with guid c747c377-ec24-4647-9579-88bb34fcc74d ({"state"=>"STARTED"})
+   2018-10-19T03:45:34.22-0400 [STG/0] OUT Downloading swift_buildpack_v2_0_13-20180720-1608...
+   2018-10-19T03:45:34.23-0400 [STG/0] OUT Downloaded java_buildpack
+   2018-10-19T03:45:34.23-0400 [STG/0] OUT Downloading sdk-for-nodejs_v3_21-20180628-1258...
+   2018-10-19T03:45:34.24-0400 [STG/0] OUT Downloaded xpages_buildpack
+   2018-10-19T03:45:34.24-0400 [STG/0] OUT Downloading sdk-for-nodejs_v3_22-20180904-1913...
+   2018-10-19T03:45:34.27-0400 [STG/0] OUT Downloaded binary_buildpack
+   2018-10-19T03:45:34.27-0400 [STG/0] OUT Downloading dotnet-core_v1_0_26-20170913-1346...
+   2018-10-19T03:45:34.28-0400 [STG/0] OUT Downloaded swift_buildpack_v2_0_13-20180720-1608
+   2018-10-19T03:45:34.28-0400 [STG/0] OUT Downloading dotnet-core_v2_0-20180918-1356...
+   2018-10-19T03:45:34.29-0400 [STG/0] OUT Downloaded sdk-for-nodejs_v3_21-20180628-1258
+   2018-10-19T03:45:34.29-0400 [STG/0] OUT Downloading liberty-for-java_v3_24-20180806-1313...
+   2018-10-19T03:45:34.30-0400 [STG/0] OUT Downloaded php_buildpack
+   2018-10-19T03:45:34.30-0400 [STG/0] OUT Downloaded sdk-for-nodejs_v3_22-20180904-1913
+   2018-10-19T03:45:34.33-0400 [STG/0] OUT Downloaded dotnet-core_v1_0_26-20170913-1346
+   2018-10-19T03:45:34.79-0400 [STG/0] OUT Cell 50b54b7e-2ec9-4490-b10f-021141267697 successfully created container for instance de5298a1-dd2d-44e2-8921-8fcca4d37722
+   2018-10-19T03:45:36.04-0400 [STG/0] OUT -----> Dotnet-Core Buildpack version v2.0-20180918-1356
+   2018-10-19T03:45:50.95-0400 [STG/0] OUT -----> Finalizing Dotnet Core
+   2018-10-19T03:45:55.91-0400 [STG/0] OUT          Installing System.Private.DataContractSerialization 4.1.1.
+   2018-10-19T03:45:59.33-0400 [STG/0] OUT          Installing System.Reflection.Metadata 1.4.1.
+   2018-10-19T03:45:59.33-0400 [STG/0] OUT          Installing runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple 4.3.0.
+   2018-10-19T03:45:59.33-0400 [STG/0] OUT          Installing runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:45:59.33-0400 [STG/0] OUT          Installing runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:45:59.33-0400 [STG/0] OUT          Installing runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:45:59.34-0400 [STG/0] OUT          Installing runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:45:59.34-0400 [STG/0] OUT          Installing runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:45:59.34-0400 [STG/0] OUT          Installing runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:45:59.34-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.All 2.0.0.
+   2018-10-19T03:45:59.34-0400 [STG/0] OUT          Installing runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:45:59.34-0400 [STG/0] OUT          Installing Newtonsoft.Json.Bson 1.0.1.
+   2018-10-19T03:45:59.34-0400 [STG/0] OUT          Installing Microsoft.Extensions.Configuration.EnvironmentVariables 2.0.0.
+   2018-10-19T03:45:59.34-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.Cors 2.0.0.
+   2018-10-19T03:45:59.34-0400 [STG/0] OUT          Installing runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:45:59.34-0400 [STG/0] OUT          Installing Microsoft.AspNetCore 2.0.0.
+   2018-10-19T03:45:59.34-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.Razor.Extensions 2.0.0.
+   2018-10-19T03:45:59.34-0400 [STG/0] OUT          Installing runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:46:02.36-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 2.0.0.
+   2018-10-19T03:46:02.36-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Localization.Routing 2.0.0.
+   2018-10-19T03:46:02.36-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Identity 2.0.0.
+   2018-10-19T03:46:02.36-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.CookiePolicy 2.0.0.
+   2018-10-19T03:46:02.36-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.Abstractions 2.0.0.
+   2018-10-19T03:46:02.36-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Html.Abstractions 2.0.0.
+   2018-10-19T03:46:02.36-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.StaticFiles 2.0.0.
+   2018-10-19T03:46:02.36-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Razor.Runtime 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.Abstractions 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.ResponseCaching 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Diagnostics.Abstractions 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Cors 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Http 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Owin 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.Extensions.Configuration.UserSecrets 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Diagnostics 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Hosting 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.AzureAppServicesIntegration 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.DataProtection.Extensions 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authorization 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.DataProtection.Abstractions 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.Core 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Antiforgery 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Server.IISIntegration 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authorization.Policy 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.Extensions.Configuration.CommandLine 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.MicrosoftAccount 2.0.0.
+   2018-10-19T03:46:02.37-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.AzureAppServices.HostingStartup 2.0.0.
+   2018-10-19T03:46:02.38-0400 [STG/0] OUT          Installing Microsoft.Extensions.Logging.Console 2.0.0.
+   2018-10-19T03:46:02.38-0400 [STG/0] OUT          Installing Microsoft.Extensions.Configuration.FileExtensions 2.0.0.
+   2018-10-19T03:46:02.38-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.Twitter 2.0.0.
+   2018-10-19T03:46:02.38-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.TagHelpers 2.0.0.
+   2018-10-19T03:46:02.38-0400 [STG/0] OUT          Installing Microsoft.Extensions.Logging.Debug 2.0.0.
+   2018-10-19T03:46:02.38-0400 [STG/0] OUT          Installing Microsoft.Extensions.FileProviders.Embedded 2.0.0.
+   2018-10-19T03:46:02.38-0400 [STG/0] OUT          Installing Microsoft.Extensions.Logging.Configuration 2.0.0.
+   2018-10-19T03:46:02.39-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.Google 2.0.0.
+   2018-10-19T03:46:02.39-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.Cookies 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.EntityFrameworkCore.Relational 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.Facebook 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Cryptography.Internal 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.Net.Http.Headers 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Http.Extensions 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.Extensions.Logging.AzureAppServices 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Server.Kestrel.Core 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.Localization 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.Extensions.Logging 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.WebSockets 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.Extensions.Configuration.Xml 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.Extensions.Identity.Core 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.Extensions.Identity.Stores 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.DataAnnotations 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.Extensions.WebEncoders 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.DataProtection 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.Data.Sqlite.Core 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.JsonPatch 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Server.HttpSys 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.Data.Sqlite 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.EntityFrameworkCore.Sqlite 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.Extensions.Logging.EventSource 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.Extensions.Configuration.Json 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.NodeServices 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.OAuth 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.ApplicationInsights.HostingStartup 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.ViewFeatures 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.Extensions.Caching.Redis 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.CodeAnalysis.Razor 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.Razor 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.Core 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.EntityFrameworkCore 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.EntityFrameworkCore.SqlServer 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.Extensions.Caching.SqlServer 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.OpenIdConnect 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.JwtBearer 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.Extensions.Configuration.AzureKeyVault 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.DataProtection.AzureStorage 2.0.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing NETStandard.Library 1.6.1.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing System.Diagnostics.DiagnosticSource 4.4.1.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing System.Reflection.Metadata 1.5.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing System.Text.Encodings.Web 4.4.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing System.Security.Principal.Windows 4.4.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.CSharp 4.4.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing System.Buffers 4.4.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing System.ValueTuple 4.4.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing System.Threading.Tasks.Extensions 4.4.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing System.Security.Cryptography.Xml 4.4.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing System.Numerics.Vectors 4.4.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Libuv 1.10.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing System.ComponentModel.Annotations 4.4.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing Microsoft.Win32.Registry 4.4.0.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing SQLitePCLRaw.core 1.1.7.
+   2018-10-19T03:46:02.40-0400 [STG/0] OUT          Installing SQLitePCLRaw.bundle_green 1.1.7.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing runtime.native.System.Data.SqlClient.sni 4.4.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing Microsoft.IdentityModel.Protocols 2.1.4.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing Microsoft.Rest.ClientRuntime 2.3.8.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing Microsoft.Azure.KeyVault.WebKey 2.0.7.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing Microsoft.Rest.ClientRuntime.Azure 3.3.7.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing System.Runtime.Serialization.Json 4.0.2.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing System.Spatial 5.8.2.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing Microsoft.Data.OData 5.8.2.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing System.Buffers 4.3.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing runtime.native.System 4.3.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing runtime.native.System.IO.Compression 4.3.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing runtime.native.System.Net.Http 4.3.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing System.Security.Cryptography.Cng 4.3.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing System.Security.Cryptography.Csp 4.3.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing System.Diagnostics.DiagnosticSource 4.3.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing runtime.native.System.Security.Cryptography.Apple 4.3.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing System.Security.Principal.Windows 4.3.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing System.Diagnostics.DiagnosticSource 4.4.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing Microsoft.Extensions.PlatformAbstractions 1.1.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing System.Security.Principal 4.3.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing System.Security.Claims 4.3.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing runtime.native.System.Net.Security 4.3.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing System.Xml.XPath 4.3.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing Microsoft.CSharp 4.0.1.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing runtime.win-x86.runtime.native.System.Data.SqlClient.sni 4.4.0.
+   2018-10-19T03:46:02.45-0400 [STG/0] OUT          Installing runtime.win-x64.runtime.native.System.Data.SqlClient.sni 4.4.0.
+   2018-10-19T03:46:02.46-0400 [STG/0] OUT          Installing runtime.win-arm64.runtime.native.System.Data.SqlClient.sni 4.4.0.
+   2018-10-19T03:46:02.46-0400 [STG/0] OUT          Installing System.Diagnostics.Contracts 4.3.0.
+   2018-10-19T03:46:02.46-0400 [STG/0] OUT          Installing System.IdentityModel.Tokens.Jwt 5.1.4.
+   2018-10-19T03:46:03.27-0400 [STG/0] OUT          Restore completed in 10.56 sec for /tmp/app/src/GetStartedDotnet/GetStartedDotnet.csproj.
+   2018-10-19T03:46:03.67-0400 [STG/0] OUT          Generating MSBuild file /tmp/app/src/GetStartedDotnet/obj/GetStartedDotnet.csproj.nuget.g.props.
+   2018-10-19T03:46:03.68-0400 [STG/0] OUT          Generating MSBuild file /tmp/app/src/GetStartedDotnet/obj/GetStartedDotnet.csproj.nuget.g.targets.
+   2018-10-19T03:46:03.71-0400 [STG/0] OUT          Restore completed in 11.01 sec for /tmp/app/src/GetStartedDotnet/GetStartedDotnet.csproj.
+   2018-10-19T03:46:04.40-0400 [STG/0] OUT        Required dotnetframework versions: [2.0.0]
+   2018-10-19T03:46:04.40-0400 [STG/0] OUT -----> Installing dotnet-framework 2.0.0
+   2018-10-19T03:46:04.40-0400 [STG/0] OUT        Copy [/tmp/buildpacks/a0cc2b5bf38b9bb1ea6953c741f96899/dependencies/c8e245c37838e1b497606c9125af2132/dotnet-framework.2.0.0.linux-amd64-13cb2a76.tar.xz]
+   2018-10-19T03:46:04.60-0400 [STG/0] OUT        [31;1m**WARNING**[0m A newer version of dotnet-framework is available in this buildpack. Please adjust your app to use version 2.0.7 instead of version 2.0.0 as soon as possible. Old versions of dotnet-framework are only provided to assist in migrating to newer versions.
+   2018-10-19T03:46:07.95-0400 [STG/0] OUT -----> Publish dotnet
+   2018-10-19T03:46:09.99-0400 [STG/0] OUT          Restoring packages for /tmp/app/src/GetStartedDotnet/GetStartedDotnet.csproj...
+   2018-10-19T03:46:09.99-0400 [STG/0] OUT          Restore completed in 90.22 ms for /tmp/app/src/GetStartedDotnet/GetStartedDotnet.csproj.
+   2018-10-19T03:46:11.23-0400 [STG/0] OUT          Installing Microsoft.NETCore.DotNetAppHost 2.0.6.
+   2018-10-19T03:46:11.26-0400 [STG/0] OUT          Installing Microsoft.NETCore.DotNetHostResolver 2.0.6.
+   2018-10-19T03:46:12.59-0400 [STG/0] OUT          Installing runtime.ubuntu.14.04-x64.runtime.native.System.Net.Security 4.3.0.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.ubuntu.14.04-x64.runtime.native.System.IO.Compression 4.3.0.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.ubuntu.14.04-x64.runtime.native.System.Net.Http 4.3.0.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.ubuntu.14.04-x64.runtime.native.System 4.3.0.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.linux-x64.Microsoft.NETCore.DotNetAppHost 2.0.6.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.unix.System.Net.Primitives 4.3.0.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.unix.Microsoft.Win32.Primitives 4.3.0.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.any.System.Runtime.Handles 4.3.0.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.any.System.Globalization.Calendars 4.3.0.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.linux-x64.Microsoft.NETCore.App 2.0.6.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.any.System.Diagnostics.Tracing 4.3.0.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing System.Private.Uri 4.3.0.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.any.System.Reflection.Primitives 4.3.0.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.any.System.Threading.Timer 4.3.0.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.unix.System.Net.Sockets 4.3.0.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.linux-x64.Microsoft.NETCore.DotNetHostPolicy 2.0.6.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.unix.System.Console 4.3.0.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.unix.System.IO.FileSystem 4.3.0.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.any.System.Diagnostics.Tools 4.3.0.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.any.System.Collections 4.3.0.
+   2018-10-19T03:46:12.69-0400 [STG/0] OUT          Installing runtime.any.System.Runtime.InteropServices 4.3.0.
+   2018-10-19T03:46:12.70-0400 [STG/0] OUT          Installing runtime.linux-x64.Microsoft.NETCore.DotNetHostResolver 2.0.6.
+   2018-10-19T03:46:12.70-0400 [STG/0] OUT          Installing runtime.any.System.Globalization 4.3.0.
+   2018-10-19T03:46:12.70-0400 [STG/0] OUT          Installing runtime.unix.System.Runtime.Extensions 4.3.0.
+   2018-10-19T03:46:12.70-0400 [STG/0] OUT          Installing runtime.any.System.IO 4.3.0.
+   2018-10-19T03:46:12.70-0400 [STG/0] OUT          Installing runtime.any.System.Runtime 4.3.0.
+   2018-10-19T03:46:12.70-0400 [STG/0] OUT          Installing runtime.any.System.Reflection 4.3.0.
+   2018-10-19T03:46:12.70-0400 [STG/0] OUT          Installing runtime.unix.System.Diagnostics.Debug 4.3.0.
+   2018-10-19T03:46:12.70-0400 [STG/0] OUT          Installing runtime.any.System.Threading.Tasks 4.3.0.
+   2018-10-19T03:46:12.70-0400 [STG/0] OUT          Installing runtime.any.System.Reflection.Extensions 4.3.0.
+   2018-10-19T03:46:12.70-0400 [STG/0] OUT          Installing runtime.any.System.Text.Encoding.Extensions 4.3.0.
+   2018-10-19T03:46:12.70-0400 [STG/0] OUT          Installing runtime.any.System.Resources.ResourceManager 4.3.0.
+   2018-10-19T03:46:12.70-0400 [STG/0] OUT          Installing runtime.any.System.Text.Encoding 4.3.0.
+   2018-10-19T03:46:14.60-0400 [STG/0] OUT          Generating MSBuild file /tmp/app/src/GetStartedDotnet/obj/GetStartedDotnet.csproj.nuget.g.props.
+   2018-10-19T03:46:14.60-0400 [STG/0] OUT          Generating MSBuild file /tmp/app/src/GetStartedDotnet/obj/GetStartedDotnet.csproj.nuget.g.targets.
+   2018-10-19T03:46:14.66-0400 [STG/0] OUT          Restore completed in 4.63 sec for /tmp/app/src/GetStartedDotnet/GetStartedDotnet.csproj.
+   2018-10-19T03:46:40.85-0400 [STG/0] OUT        Services/CloudantService.cs(76,59): error CS0411: The type arguments for method 'HttpContentExtensions.ReadAsAsync<T>(HttpContent)' cannot be inferred from the usage. Try specifying the type arguments explicitly. [/tmp/app/src/GetStartedDotnet/GetStartedDotnet.csproj]
+   2018-10-19T03:46:40.93-0400 [STG/0] OUT        [31;1m**ERROR**[0m Unable to run dotnet publish: exit status 1
+   [31m2018-10-19T03:46:40.93-0400 [STG/0] ERR Failed to compile droplet: Failed to run finalize script: exit status 12[0m
+   2018-10-19T03:46:40.96-0400 [STG/0] OUT Exit status 223
+   2018-10-19T03:46:40.96-0400 [STG/0] OUT Cell 50b54b7e-2ec9-4490-b10f-021141267697 stopping instance de5298a1-dd2d-44e2-8921-8fcca4d37722
+   2018-10-19T03:46:40.96-0400 [STG/0] OUT Cell 50b54b7e-2ec9-4490-b10f-021141267697 destroying container for instance de5298a1-dd2d-44e2-8921-8fcca4d37722
+   2018-10-19T03:46:43.97-0400 [STG/0] OUT Cell 50b54b7e-2ec9-4490-b10f-021141267697 successfully destroyed container for instance de5298a1-dd2d-44e2-8921-8fcca4d37722
+   2018-10-19T03:47:43.31-0400 [API/0] OUT Updated app with guid c747c377-ec24-4647-9579-88bb34fcc74d ({"name"=>"GetStartedDotnet", "memory"=>512, "environment_json"=>"PRIVATE DATA HIDDEN"})
+   2018-10-19T03:47:49.77-0400 [API/2] OUT Uploading bits for app with guid c747c377-ec24-4647-9579-88bb34fcc74d
+   2018-10-19T03:48:01.88-0400 [API/9] OUT Creating build for app with guid c747c377-ec24-4647-9579-88bb34fcc74d
+   2018-10-19T03:48:03.17-0400 [API/9] OUT Updated app with guid c747c377-ec24-4647-9579-88bb34fcc74d ({"state"=>"STARTED"})
+   2018-10-19T03:48:03.21-0400 [STG/0] OUT Downloading xpages_buildpack...
+   2018-10-19T03:48:03.21-0400 [STG/0] OUT Downloading liberty-for-java...
+   2018-10-19T03:48:03.21-0400 [STG/0] OUT Downloading php_buildpack...
+   2018-10-19T03:48:03.23-0400 [STG/0] OUT Downloading binary_buildpack...
+   2018-10-19T03:48:03.28-0400 [STG/0] OUT Downloaded liberty-for-java
+   2018-10-19T03:48:03.46-0400 [STG/0] OUT Downloading go_buildpack...
+   2018-10-19T03:48:03.49-0400 [STG/0] OUT Downloaded ruby_buildpack
+   2018-10-19T03:48:03.49-0400 [STG/0] OUT Downloading python_buildpack...
+   2018-10-19T03:48:03.49-0400 [STG/0] OUT Downloaded staticfile_buildpack
+   2018-10-19T03:48:03.50-0400 [STG/0] OUT Downloaded dotnet-core
+   2018-10-19T03:48:03.51-0400 [STG/0] OUT Downloaded java_buildpack
+   2018-10-19T03:48:03.52-0400 [STG/0] OUT Downloaded go_buildpack
+   2018-10-19T03:48:03.55-0400 [STG/0] OUT Downloaded python_buildpack
+   2018-10-19T03:48:03.55-0400 [STG/0] OUT Cell 12e626dc-5e48-4b7c-b22c-540c4cdfb779 creating container for instance 3e0b9271-2fb0-4beb-90f4-43c2d1f6ba48
+   2018-10-19T03:48:04.73-0400 [STG/0] OUT Downloaded app package (36.4K)
+   2018-10-19T03:48:05.43-0400 [STG/0] OUT -----> Dotnet-Core Buildpack version v2.0-20180918-1356
+   2018-10-19T03:48:05.43-0400 [STG/0] OUT -----> Supplying Dotnet Core
+   2018-10-19T03:48:05.43-0400 [STG/0] OUT -----> Installing libunwind 1.2.1
+   2018-10-19T03:48:05.43-0400 [STG/0] OUT        Copy [/tmp/buildpacks/a0cc2b5bf38b9bb1ea6953c741f96899/dependencies/f6a1a8bce180a6bb81415c54634ecc15/libunwind-1.2.1-4bc9ce84.tar.gz]
+   2018-10-19T03:48:21.38-0400 [STG/0] OUT -----> Finalizing Dotnet Core
+   2018-10-19T03:48:21.38-0400 [STG/0] OUT -----> Restore dotnet dependencies
+   2018-10-19T03:48:25.94-0400 [STG/0] OUT          Installing System.Xml.XmlSerializer 4.0.11.
+   2018-10-19T03:48:25.96-0400 [STG/0] OUT          Installing Microsoft.IdentityModel.Logging 1.1.4.
+   2018-10-19T03:48:25.96-0400 [STG/0] OUT          Installing System.Collections.Immutable 1.3.0.
+   2018-10-19T03:48:25.97-0400 [STG/0] OUT          Installing System.Threading.Overlapped 4.0.1.
+   2018-10-19T03:48:25.97-0400 [STG/0] OUT          Installing System.Xml.XmlDocument 4.0.1.
+   2018-10-19T03:48:25.99-0400 [STG/0] OUT          Installing System.Security.Principal 4.0.1.
+   2018-10-19T03:48:25.99-0400 [STG/0] OUT          Installing System.Dynamic.Runtime 4.0.11.
+   2018-10-19T03:48:25.99-0400 [STG/0] OUT          Installing Microsoft.NETCore.App 2.0.0.
+   2018-10-19T03:48:25.99-0400 [STG/0] OUT          Installing Microsoft.AspNet.WebApi.Client 5.2.6.
+   2018-10-19T03:48:26.00-0400 [STG/0] OUT          Installing Microsoft.VisualStudio.Web.CodeGeneration.Tools 2.0.0.
+   2018-10-19T03:48:26.00-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.All 2.0.0.
+   2018-10-19T03:48:26.01-0400 [STG/0] OUT          Installing Microsoft.NETCore.Platforms 2.0.0.
+   2018-10-19T03:48:26.01-0400 [STG/0] OUT          Installing NETStandard.Library 2.0.0.
+   2018-10-19T03:48:26.03-0400 [STG/0] OUT          Installing Microsoft.VisualStudio.Web.CodeGeneration.Contracts 2.0.0.
+   2018-10-19T03:48:26.16-0400 [STG/0] OUT          Installing System.Private.DataContractSerialization 4.1.1.
+   2018-10-19T03:48:26.16-0400 [STG/0] OUT          Installing Microsoft.Win32.Registry 4.0.0.
+   2018-10-19T03:48:26.17-0400 [STG/0] OUT          Installing Newtonsoft.Json.Bson 1.0.1.
+   2018-10-19T03:48:26.17-0400 [STG/0] OUT          Installing NuGet.Frameworks 4.0.0.
+   2018-10-19T03:48:26.17-0400 [STG/0] OUT          Installing System.Security.Cryptography.Cng 4.2.0.
+   2018-10-19T03:48:26.17-0400 [STG/0] OUT          Installing System.Reflection.Metadata 1.4.1.
+   2018-10-19T03:48:26.19-0400 [STG/0] OUT          Installing Microsoft.Build.Runtime 15.3.409.
+   2018-10-19T03:48:26.22-0400 [STG/0] OUT          Installing Microsoft.Extensions.FileSystemGlobbing 2.0.0.
+   2018-10-19T03:48:28.44-0400 [STG/0] OUT          Installing System.Security.Cryptography.OpenSsl 4.0.0.
+   2018-10-19T03:48:28.47-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Localization 2.0.0.
+   2018-10-19T03:48:28.47-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.MicrosoftAccount 2.0.0.
+   2018-10-19T03:48:28.49-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Http.Abstractions 2.0.0.
+   2018-10-19T03:48:28.49-0400 [STG/0] OUT          Installing runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple 4.3.0.
+   2018-10-19T03:48:28.49-0400 [STG/0] OUT          Installing runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:48:28.49-0400 [STG/0] OUT          Installing runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:48:28.49-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Cryptography.Internal 2.0.0.
+   2018-10-19T03:48:28.49-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.Facebook 2.0.0.
+   2018-10-19T03:48:28.49-0400 [STG/0] OUT          Installing runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:48:28.52-0400 [STG/0] OUT          Installing runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:48:28.52-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.AzureAppServicesIntegration 2.0.0.
+   2018-10-19T03:48:28.52-0400 [STG/0] OUT          Installing runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:48:28.52-0400 [STG/0] OUT          Installing runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:48:28.55-0400 [STG/0] OUT          Installing runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:48:28.55-0400 [STG/0] OUT          Installing Microsoft.Extensions.Logging.Console 2.0.0.
+   2018-10-19T03:48:28.55-0400 [STG/0] OUT          Installing runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:48:28.55-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Hosting.Abstractions 2.0.0.
+   2018-10-19T03:48:28.55-0400 [STG/0] OUT          Installing runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:48:28.55-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Antiforgery 2.0.0.
+   2018-10-19T03:48:28.55-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Cryptography.KeyDerivation 2.0.0.
+   2018-10-19T03:48:28.55-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.AzureAppServices.HostingStartup 2.0.0.
+   2018-10-19T03:48:28.55-0400 [STG/0] OUT          Installing runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:48:28.55-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.Core 2.0.0.
+   2018-10-19T03:48:28.55-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authorization.Policy 2.0.0.
+   2018-10-19T03:48:28.56-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.Abstractions 2.0.0.
+   2018-10-19T03:48:28.56-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Hosting.Server.Abstractions 2.0.0.
+   2018-10-19T03:48:28.56-0400 [STG/0] OUT          Installing Microsoft.EntityFrameworkCore.Design 2.0.0.
+   2018-10-19T03:48:28.56-0400 [STG/0] OUT          Installing Microsoft.Extensions.Primitives 2.0.0.
+   2018-10-19T03:48:28.56-0400 [STG/0] OUT          Installing System.Resources.ResourceManager 4.3.0.
+   2018-10-19T03:48:28.56-0400 [STG/0] OUT          Installing System.Reflection.Extensions 4.3.0.
+   2018-10-19T03:48:28.56-0400 [STG/0] OUT          Installing Microsoft.Data.Edm 5.8.2.
+   2018-10-19T03:48:28.56-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv 2.0.0.
+   2018-10-19T03:48:28.57-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Http.Extensions 2.0.0.
+   2018-10-19T03:48:28.57-0400 [STG/0] OUT          Installing Microsoft.Net.Http.Headers 2.0.0.
+   2018-10-19T03:48:28.57-0400 [STG/0] OUT          Installing Microsoft.Extensions.Identity.Stores 2.0.0.
+   2018-10-19T03:48:28.57-0400 [STG/0] OUT          Installing Microsoft.Extensions.Identity.Core 2.0.0.
+   2018-10-19T03:48:28.57-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.DataAnnotations 2.0.0.
+   2018-10-19T03:48:28.58-0400 [STG/0] OUT          Installing System.Threading.Tasks 4.3.0.
+   2018-10-19T03:48:28.58-0400 [STG/0] OUT          Installing Microsoft.Extensions.Logging.AzureAppServices 2.0.0.
+   2018-10-19T03:48:28.58-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions 2.0.0.
+   2018-10-19T03:48:28.58-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Server.Kestrel.Core 2.0.0.
+   2018-10-19T03:48:28.58-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.WebSockets 2.0.0.
+   2018-10-19T03:48:28.58-0400 [STG/0] OUT          Installing Microsoft.Extensions.Logging.EventSource 2.0.0.
+   2018-10-19T03:48:28.59-0400 [STG/0] OUT          Installing Microsoft.Extensions.Configuration.Json 2.0.0.
+   2018-10-19T03:48:28.59-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.NodeServices 2.0.0.
+   2018-10-19T03:48:28.59-0400 [STG/0] OUT          Installing System.Runtime.Serialization.Formatters 4.3.0.
+   2018-10-19T03:48:28.59-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.JsonPatch 2.0.0.
+   2018-10-19T03:48:28.59-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.OAuth 2.0.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.ViewFeatures 2.0.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Server.HttpSys 2.0.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.DataProtection 2.0.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing Microsoft.Extensions.Caching.Redis 2.0.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing Microsoft.NETCore.Targets 1.0.1.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing System.ObjectModel 4.3.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing Microsoft.EntityFrameworkCore 2.0.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing System.Globalization.Extensions 4.3.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing Microsoft.CSharp 4.3.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing Microsoft.Data.Sqlite.Core 2.0.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing System.Linq 4.3.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing Microsoft.EntityFrameworkCore.Sqlite 2.0.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.Core 2.0.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing Microsoft.Data.Sqlite 2.0.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing Microsoft.Extensions.Caching.SqlServer 2.0.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing Microsoft.EntityFrameworkCore.SqlServer 2.0.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.ApplicationInsights.HostingStartup 2.0.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing System.Runtime.Handles 4.3.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.JwtBearer 2.0.0.
+   2018-10-19T03:48:28.60-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Authentication.OpenIdConnect 2.0.0.
+   2018-10-19T03:48:28.61-0400 [STG/0] OUT          Installing Microsoft.Extensions.Configuration.AzureKeyVault 2.0.0.
+   2018-10-19T03:48:28.61-0400 [STG/0] OUT          Installing Microsoft.CodeAnalysis.Razor 2.0.0.
+   2018-10-19T03:48:28.61-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.Mvc.Razor 2.0.0.
+   2018-10-19T03:48:28.61-0400 [STG/0] OUT          Installing Microsoft.AspNetCore.DataProtection.AzureStorage 2.0.0.
+   2018-10-19T03:48:28.61-0400 [STG/0] OUT          Installing Microsoft.NETCore.DotNetAppHost 2.0.0.
+   2018-10-19T03:48:28.61-0400 [STG/0] OUT          Installing System.Runtime.Numerics 4.3.0.
+   2018-10-19T03:48:28.61-0400 [STG/0] OUT          Installing System.Xml.XDocument 4.3.0.
+   2018-10-19T03:48:28.61-0400 [STG/0] OUT          Installing Microsoft.NETCore.DotNetHostResolver 2.0.0.
+   2018-10-19T03:48:28.61-0400 [STG/0] OUT          Installing System.Xml.ReaderWriter 4.3.0.
+   2018-10-19T03:48:28.61-0400 [STG/0] OUT          Installing System.Reflection 4.3.0.
+   2018-10-19T03:48:28.61-0400 [STG/0] OUT          Installing System.Xml.XPath 4.3.0.
+   2018-10-19T03:48:28.61-0400 [STG/0] OUT          Installing System.ComponentModel.TypeConverter 4.3.0.
+   2018-10-19T03:48:28.61-0400 [STG/0] OUT          Installing Microsoft.NETCore.Platforms 1.0.2.
+   2018-10-19T03:48:28.61-0400 [STG/0] OUT          Installing System.IdentityModel.Tokens.Jwt 5.1.4.
+   2018-10-19T03:48:28.61-0400 [STG/0] OUT          Installing System.Diagnostics.Contracts 4.3.0.
+   2018-10-19T03:48:28.61-0400 [STG/0] OUT          Installing System.Runtime 4.3.0.
+   2018-10-19T03:48:28.61-0400 [STG/0] OUT          Installing Microsoft.Extensions.PlatformAbstractions 1.1.0.
+   2018-10-19T03:48:28.62-0400 [STG/0] OUT          Installing System.Diagnostics.DiagnosticSource 4.4.0.
+   2018-10-19T03:48:28.62-0400 [STG/0] OUT          Installing System.Linq.Expressions 4.3.0.
+   2018-10-19T03:48:28.62-0400 [STG/0] OUT          Installing runtime.win-x86.runtime.native.System.Data.SqlClient.sni 4.4.0.
+   2018-10-19T03:48:28.62-0400 [STG/0] OUT          Installing runtime.win-arm64.runtime.native.System.Data.SqlClient.sni 4.4.0.
+   2018-10-19T03:48:28.62-0400 [STG/0] OUT          Installing System.Runtime.CompilerServices.Unsafe 4.4.0.
+   2018-10-19T03:48:28.62-0400 [STG/0] OUT          Installing System.Dynamic.Runtime 4.3.0.
+   2018-10-19T03:48:28.62-0400 [STG/0] OUT          Installing NETStandard.Library 1.6.0.
+   2018-10-19T03:48:28.62-0400 [STG/0] OUT          Installing Microsoft.Build.Framework 15.3.409.
+   2018-10-19T03:48:28.62-0400 [STG/0] OUT          Installing NETStandard.Library 1.6.1.
+   2018-10-19T03:48:30.19-0400 [STG/0] OUT          Installing System.Runtime.Numerics 4.0.1.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Security.Cryptography.Algorithms 4.3.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.IO.Compression 4.3.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Security.Cryptography.X509Certificates 4.3.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Net.Http 4.3.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Security.AccessControl 4.4.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Threading.Thread 4.3.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Threading.ThreadPool 4.3.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Net.NameResolution 4.3.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Net.Security 4.3.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Linq.Queryable 4.0.1.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing Newtonsoft.Json 9.0.1.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing Microsoft.DotNet.PlatformAbstractions 2.0.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing SQLitePCLRaw.lib.e_sqlite3.linux 1.1.7.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing SQLitePCLRaw.lib.e_sqlite3.v110_xp 1.1.7.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing SQLitePCLRaw.lib.e_sqlite3.osx 1.1.7.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing SQLitePCLRaw.provider.e_sqlite3.netstandard11 1.1.7.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Text.Encoding.CodePages 4.4.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing runtime.native.System.Data.SqlClient.sni 4.4.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Text.Encodings.Web 4.3.1.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing Microsoft.ApplicationInsights 2.4.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing Microsoft.ApplicationInsights.DependencyCollector 2.4.1.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing Microsoft.IdentityModel.Protocols 2.1.4.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing Microsoft.Rest.ClientRuntime 2.3.8.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing Microsoft.Rest.ClientRuntime.Azure 3.3.7.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing Microsoft.Azure.KeyVault.WebKey 2.0.7.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Runtime.Serialization.Json 4.0.2.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.ValueTuple 4.3.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Reflection.Metadata 1.4.2.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Diagnostics.StackTrace 4.3.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Threading.Tasks.Parallel 4.3.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Diagnostics.FileVersionInfo 4.3.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Collections.Immutable 1.3.1.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing Microsoft.CodeAnalysis.Analyzers 1.1.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Text.Encoding.CodePages 4.3.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Xml.XPath.XDocument 4.3.0.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing System.Spatial 5.8.2.
+   2018-10-19T03:48:30.21-0400 [STG/0] OUT          Installing Microsoft.Data.OData 5.8.2.
+   2018-10-19T03:48:30.22-0400 [STG/0] OUT          Installing System.Buffers 4.3.0.
+   2018-10-19T03:48:30.22-0400 [STG/0] OUT          Installing runtime.native.System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:48:30.22-0400 [STG/0] OUT          Installing runtime.native.System 4.3.0.
+   2018-10-19T03:48:30.22-0400 [STG/0] OUT          Installing runtime.native.System.Security.Cryptography.Apple 4.3.0.
+   2018-10-19T03:48:30.22-0400 [STG/0] OUT          Installing runtime.native.System.IO.Compression 4.3.0.
+   2018-10-19T03:48:30.22-0400 [STG/0] OUT          Installing runtime.native.System.Net.Http 4.3.0.
+   2018-10-19T03:48:30.22-0400 [STG/0] OUT          Installing System.Security.Cryptography.Csp 4.3.0.
+   2018-10-19T03:48:30.22-0400 [STG/0] OUT          Installing System.Security.Cryptography.OpenSsl 4.3.0.
+   2018-10-19T03:48:30.22-0400 [STG/0] OUT          Installing System.Security.Cryptography.Cng 4.3.0.
+   2018-10-19T03:48:30.22-0400 [STG/0] OUT          Installing System.Diagnostics.DiagnosticSource 4.3.0.
+   2018-10-19T03:48:30.22-0400 [STG/0] OUT          Installing System.Security.Principal.Windows 4.3.0.
+   2018-10-19T03:48:30.22-0400 [STG/0] OUT          Installing System.Security.Principal 4.3.0.
+   2018-10-19T03:48:30.22-0400 [STG/0] OUT          Installing System.Security.Claims 4.3.0.
+   2018-10-19T03:48:30.22-0400 [STG/0] OUT          Installing runtime.native.System.Net.Security 4.3.0.
+   2018-10-19T03:48:30.80-0400 [STG/0] OUT          Restore completed in 7.78 sec for /tmp/app/src/GetStartedDotnet/GetStartedDotnet.csproj.
+   2018-10-19T03:48:31.14-0400 [STG/0] OUT          Generating MSBuild file /tmp/app/src/GetStartedDotnet/obj/GetStartedDotnet.csproj.nuget.g.props.
+   2018-10-19T03:48:31.14-0400 [STG/0] OUT          Generating MSBuild file /tmp/app/src/GetStartedDotnet/obj/GetStartedDotnet.csproj.nuget.g.targets.
+   2018-10-19T03:48:31.17-0400 [STG/0] OUT          Restore completed in 8.18 sec for /tmp/app/src/GetStartedDotnet/GetStartedDotnet.csproj.
+   2018-10-19T03:48:31.25-0400 [STG/0] OUT        Required dotnetframework versions: [2.0.0]
+   2018-10-19T03:48:31.25-0400 [STG/0] OUT -----> Installing dotnet-framework 2.0.0
+   2018-10-19T03:48:31.26-0400 [STG/0] OUT        Copy [/tmp/buildpacks/a0cc2b5bf38b9bb1ea6953c741f96899/dependencies/c8e245c37838e1b497606c9125af2132/dotnet-framework.2.0.0.linux-amd64-13cb2a76.tar.xz]
+   2018-10-19T03:48:31.43-0400 [STG/0] OUT        [31;1m**WARNING**[0m A newer version of dotnet-framework is available in this buildpack. Please adjust your app to use version 2.0.7 instead of version 2.0.0 as soon as possible. Old versions of dotnet-framework are only provided to assist in migrating to newer versions.
+   2018-10-19T03:48:34.13-0400 [STG/0] OUT -----> Publish dotnet
+   2018-10-19T03:48:34.63-0400 [STG/0] OUT        Microsoft (R) Build Engine version 15.7.179.6572 for .NET Core
+   2018-10-19T03:48:34.63-0400 [STG/0] OUT        Copyright (C) Microsoft Corporation. All rights reserved.
+   2018-10-19T03:48:34.63-0400 [STG/0] OUT        
+   2018-10-19T03:48:35.92-0400 [STG/0] OUT          Restore completed in 94.26 ms for /tmp/app/src/GetStartedDotnet/GetStartedDotnet.csproj.
+   2018-10-19T03:48:35.92-0400 [STG/0] OUT          Restoring packages for /tmp/app/src/GetStartedDotnet/GetStartedDotnet.csproj...
+   2018-10-19T03:48:36.74-0400 [STG/0] OUT          Installing Microsoft.NETCore.DotNetAppHost 2.0.6.
+   2018-10-19T03:48:36.78-0400 [STG/0] OUT          Installing Microsoft.NETCore.DotNetHostResolver 2.0.6.
+   2018-10-19T03:48:36.80-0400 [STG/0] OUT          Installing NETStandard.Library 2.0.1.
+   2018-10-19T03:48:36.81-0400 [STG/0] OUT          Installing Microsoft.NETCore.DotNetHostPolicy 2.0.6.
+   2018-10-19T03:48:36.81-0400 [STG/0] OUT          Installing Microsoft.NETCore.Platforms 2.0.1.
+   2018-10-19T03:48:36.81-0400 [STG/0] OUT          Installing Microsoft.NETCore.App 2.0.6.
+   2018-10-19T03:48:37.88-0400 [STG/0] OUT          Installing runtime.unix.System.Private.Uri 4.3.0.
+   2018-10-19T03:48:37.88-0400 [STG/0] OUT          Installing runtime.ubuntu.14.04-x64.runtime.native.System.Net.Security 4.3.0.
+   2018-10-19T03:48:37.90-0400 [STG/0] OUT          Installing runtime.ubuntu.14.04-x64.runtime.native.System.IO.Compression 4.3.0.
+   2018-10-19T03:48:37.90-0400 [STG/0] OUT          Installing runtime.ubuntu.14.04-x64.runtime.native.System.Net.Http 4.3.0.
+   2018-10-19T03:48:37.90-0400 [STG/0] OUT          Installing runtime.ubuntu.14.04-x64.runtime.native.System 4.3.0.
+   2018-10-19T03:48:37.90-0400 [STG/0] OUT          Installing runtime.linux-x64.Microsoft.NETCore.DotNetAppHost 2.0.6.
+   2018-10-19T03:48:37.90-0400 [STG/0] OUT          Installing runtime.unix.System.Net.Primitives 4.3.0.
+   2018-10-19T03:48:37.91-0400 [STG/0] OUT          Installing runtime.unix.Microsoft.Win32.Primitives 4.3.0.
+   2018-10-19T03:48:37.91-0400 [STG/0] OUT          Installing runtime.linux-x64.Microsoft.NETCore.App 2.0.6.
+   2018-10-19T03:48:37.91-0400 [STG/0] OUT          Installing runtime.any.System.Globalization.Calendars 4.3.0.
+   2018-10-19T03:48:37.91-0400 [STG/0] OUT          Installing runtime.any.System.Diagnostics.Tracing 4.3.0.
+   2018-10-19T03:48:37.91-0400 [STG/0] OUT          Installing runtime.any.System.Runtime.Handles 4.3.0.
+   2018-10-19T03:48:37.91-0400 [STG/0] OUT          Installing System.Private.Uri 4.3.0.
+   2018-10-19T03:48:37.91-0400 [STG/0] OUT          Installing runtime.any.System.Reflection.Primitives 4.3.0.
+   2018-10-19T03:48:37.91-0400 [STG/0] OUT          Installing runtime.linux-x64.Microsoft.NETCore.DotNetHostPolicy 2.0.6.
+   2018-10-19T03:48:37.92-0400 [STG/0] OUT          Installing runtime.unix.System.Net.Sockets 4.3.0.
+   2018-10-19T03:48:37.92-0400 [STG/0] OUT          Installing runtime.any.System.Threading.Timer 4.3.0.
+   2018-10-19T03:48:37.92-0400 [STG/0] OUT          Installing runtime.unix.System.IO.FileSystem 4.3.0.
+   2018-10-19T03:48:37.92-0400 [STG/0] OUT          Installing runtime.unix.System.Console 4.3.0.
+   2018-10-19T03:48:37.98-0400 [STG/0] OUT          Installing runtime.any.System.IO 4.3.0.
+   2018-10-19T03:48:37.98-0400 [STG/0] OUT          Installing runtime.any.System.Reflection 4.3.0.
+   2018-10-19T03:48:37.99-0400 [STG/0] OUT          Installing runtime.any.System.Globalization 4.3.0.
+   2018-10-19T03:48:37.99-0400 [STG/0] OUT          Installing runtime.any.System.Reflection.Extensions 4.3.0.
+   2018-10-19T03:48:37.99-0400 [STG/0] OUT          Installing runtime.any.System.Resources.ResourceManager 4.3.0.
+   2018-10-19T03:48:37.99-0400 [STG/0] OUT          Installing runtime.any.System.Text.Encoding 4.3.0.
+   2018-10-19T03:48:37.99-0400 [STG/0] OUT          Installing runtime.any.System.Collections 4.3.0.
+   2018-10-19T03:48:37.99-0400 [STG/0] OUT          Installing runtime.any.System.Text.Encoding.Extensions 4.3.0.
+   2018-10-19T03:48:37.99-0400 [STG/0] OUT          Installing runtime.any.System.Diagnostics.Tools 4.3.0.
+   2018-10-19T03:48:37.99-0400 [STG/0] OUT          Installing runtime.any.System.Threading.Tasks 4.3.0.
+   2018-10-19T03:48:37.99-0400 [STG/0] OUT          Installing runtime.any.System.Runtime 4.3.0.
+   2018-10-19T03:48:37.99-0400 [STG/0] OUT          Installing runtime.unix.System.Runtime.Extensions 4.3.0.
+   2018-10-19T03:48:37.99-0400 [STG/0] OUT          Installing runtime.unix.System.Diagnostics.Debug 4.3.0.
+   2018-10-19T03:48:37.99-0400 [STG/0] OUT          Installing runtime.linux-x64.Microsoft.NETCore.DotNetHostResolver 2.0.6.
+   2018-10-19T03:48:37.99-0400 [STG/0] OUT          Installing runtime.any.System.Runtime.InteropServices 4.3.0.
+   2018-10-19T03:48:39.83-0400 [STG/0] OUT          Generating MSBuild file /tmp/app/src/GetStartedDotnet/obj/GetStartedDotnet.csproj.nuget.g.props.
+   2018-10-19T03:48:39.83-0400 [STG/0] OUT          Generating MSBuild file /tmp/app/src/GetStartedDotnet/obj/GetStartedDotnet.csproj.nuget.g.targets.
+   2018-10-19T03:48:39.88-0400 [STG/0] OUT          Restore completed in 3.94 sec for /tmp/app/src/GetStartedDotnet/GetStartedDotnet.csproj.
+   2018-10-19T03:48:43.50-0400 [STG/0] OUT        Services/CloudantService.cs(9,7): warning CS0105: The using directive for 'GetStartedDotnet.Models' appeared previously in this namespace [/tmp/app/src/GetStartedDotnet/GetStartedDotnet.csproj]
+   2018-10-19T03:48:44.39-0400 [STG/0] OUT          GetStartedDotnet -> /tmp/app/src/GetStartedDotnet/bin/Debug/netcoreapp2.0/ubuntu.14.04-x64/GetStartedDotnet.dll
+   2018-10-19T03:48:45.90-0400 [STG/0] OUT          GetStartedDotnet -> /tmp/contents911434764/deps/0/dotnet_publish/
+   2018-10-19T03:48:45.97-0400 [STG/0] OUT -----> Cleaning staging area
+   2018-10-19T03:48:45.97-0400 [STG/0] OUT        Removing .nuget
+   2018-10-19T03:48:47.70-0400 [STG/0] OUT        Removing .local
+   2018-10-19T03:48:47.77-0400 [STG/0] OUT        Removing dotnet
+   2018-10-19T03:48:56.30-0400 [STG/0] OUT Exit status 0
+   2018-10-19T03:48:56.30-0400 [STG/0] OUT Uploading droplet, build artifacts cache...
+   2018-10-19T03:48:56.30-0400 [STG/0] OUT Uploading droplet...
+   2018-10-19T03:48:56.30-0400 [STG/0] OUT Uploading build artifacts cache...
+   2018-10-19T03:48:56.36-0400 [STG/0] OUT Uploaded build artifacts cache (238B)
+   2018-10-19T03:48:57.17-0400 [API/11] OUT Creating droplet for app with guid c747c377-ec24-4647-9579-88bb34fcc74d
+   2018-10-19T03:49:06.35-0400 [STG/0] OUT Uploaded droplet (38.3M)
+   2018-10-19T03:49:06.36-0400 [STG/0] OUT Uploading complete
+   2018-10-19T03:49:06.39-0400 [STG/0] OUT Cell 12e626dc-5e48-4b7c-b22c-540c4cdfb779 stopping instance 3e0b9271-2fb0-4beb-90f4-43c2d1f6ba48
+   2018-10-19T03:49:06.39-0400 [STG/0] OUT Cell 12e626dc-5e48-4b7c-b22c-540c4cdfb779 destroying container for instance 3e0b9271-2fb0-4beb-90f4-43c2d1f6ba48
+   2018-10-19T03:49:06.73-0400 [CELL/0] OUT Cell 9fc22c01-3b3f-4579-9130-18f501b577d1 creating container for instance 8aeaa13c-48ce-47dd-53dc-876c
+   2018-10-19T03:49:07.19-0400 [STG/0] OUT Cell 12e626dc-5e48-4b7c-b22c-540c4cdfb779 successfully destroyed container for instance 3e0b9271-2fb0-4beb-90f4-43c2d1f6ba48
+   2018-10-19T03:49:07.19-0400 [CELL/0] OUT Cell 9fc22c01-3b3f-4579-9130-18f501b577d1 successfully created container for instance 8aeaa13c-48ce-47dd-53dc-876c
+   2018-10-19T03:49:13.25-0400 [CELL/0] OUT Starting health monitoring of container
+   2018-10-19T03:49:14.43-0400 [APP/PROC/WEB/0] OUT username 
+   2018-10-19T03:49:14.43-0400 [APP/PROC/WEB/0] OUT 1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix
+   2018-10-19T03:49:14.43-0400 [APP/PROC/WEB/0] OUT password 
+   2018-10-19T03:49:14.44-0400 [APP/PROC/WEB/0] OUT 383a8bd6de7107d0aaa4a6c53dc6f42c9623028a93e8213dd5cddc72b4d9fea6
+   2018-10-19T03:49:14.45-0400 [APP/PROC/WEB/0] OUT host 
+   2018-10-19T03:49:14.46-0400 [APP/PROC/WEB/0] OUT 1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix.cloudant.com
+   2018-10-19T03:49:14.46-0400 [APP/PROC/WEB/0] OUT url 
+   2018-10-19T03:49:14.47-0400 [APP/PROC/WEB/0] OUT https://1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix:383a8bd6de7107d0aaa4a6c53dc6f42c9623028a93e8213dd5cddc72b4d9fea6@1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix.cloudant.com
+   2018-10-19T03:49:15.47-0400 [APP/PROC/WEB/0] OUT Hosting environment: Production
+   2018-10-19T03:49:15.47-0400 [APP/PROC/WEB/0] OUT Content root path: /home/vcap/deps/0/dotnet_publish
+   2018-10-19T03:49:15.47-0400 [APP/PROC/WEB/0] OUT Now listening on: http://0.0.0.0:8080
+   2018-10-19T03:49:15.47-0400 [APP/PROC/WEB/0] OUT Application started. Press Ctrl+C to shut down.
+   2018-10-19T03:49:17.52-0400 [CELL/0] OUT Container became healthy
+   2018-10-19T04:02:20.88-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+   2018-10-19T04:02:20.88-0400 [APP/PROC/WEB/0] OUT       Request starting HTTP/1.1 GET http://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/  
+   2018-10-19T04:02:21.31-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+   2018-10-19T04:02:21.31-0400 [APP/PROC/WEB/0] OUT       Executing action method GetStartedDotnet.Controllers.HomeController.Index (GetStartedDotnet) with arguments ((null)) - ModelState is Valid
+   2018-10-19T04:02:27.36-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor[1]
+   2018-10-19T04:02:27.36-0400 [APP/PROC/WEB/0] OUT       Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+   2018-10-19T04:02:28.18-0400 [RTR/5] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-19T08:02:20.264+0000] "GET / HTTP/1.1" 200 0 2781 "https://console.bluemix.net/services/cloudantnosqldb/9fc42de6-e053-4d5f-b23a-e0e9619f83f0?paneId=connectedObjects&ace_config=%7B%22region%22%3A%22us-east%22%2C%22orgGuid%22%3A%22bf7ff873-e086-40b7-9f16-e20638b29ea2%22%2C%22spaceGuid%22%3A%2220a666f2-e77f-435d-9abd-a4c67462a2ab%22%2C%22redirect%22%3A%22https%3A%2F%2Fconsole.bluemix.net%2Fdashboard%2Fapps%3Fenv_id%3Dibm%253Ayp%253Aus-east%22%2C%22bluemixUIVersion%22%3A%22v6%22%2C%22crn%22%3A%22crn%3Av1%3Abluemix%3Apublic%3Acloudantnosqldb%3Aus-east%3As%2F20a666f2-e77f-435d-9abd-a4c67462a2ab%3A9fc42de6-e053-4d5f-b23a-e0e9619f83f0%3Acf-service-instance%3A%22%7D&env_id=ibm%3Ayp%3Aus-east" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.190.106.243:22766" "169.61.87.94:61170" x_forwarded_for:"70.45.220.69, 10.190.106.243" x_forwarded_proto:"https" vcap_request_id:"f6d5ec89-b144-4108-5c90-1fc1f95cb614" response_time:7.921131343 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"124247773" true_client_ip:"-" x_b3_traceid:"d0c2464e53ec8697" x_b3_spanid:"d0c2464e53ec8697" x_b3_parentspanid:"-"
+   2018-10-19T04:02:28.18-0400 [RTR/5] OUT 
+   2018-10-19T04:02:28.20-0400 [RTR/2] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-19T08:02:27.894+0000] "GET /api/visitors HTTP/1.1" 200 0 20 "https://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.190.106.243:22036" "169.61.87.94:61170" x_forwarded_for:"70.45.220.69, 10.190.106.243" x_forwarded_proto:"https" vcap_request_id:"1454e304-4979-46af-6d7a-c748f41dbb89" response_time:0.314088699 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"91387361" true_client_ip:"-" x_b3_traceid:"d58cbf56ed46b5a6" x_b3_spanid:"d58cbf56ed46b5a6" x_b3_parentspanid:"-"
+   2018-10-19T04:02:28.20-0400 [RTR/2] OUT 
+   2018-10-19T04:02:28.44-0400 [RTR/5] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-19T08:02:28.392+0000] "GET /css/site.min.css?v=-CHkGyR0km2lg5iYjrHUKUNSNPYxIqXn2q6KKQO5oDI HTTP/1.1" 200 0 24 "https://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.190.106.243:22669" "169.61.87.94:61170" x_forwarded_for:"70.45.220.69, 10.190.106.243" x_forwarded_proto:"https" vcap_request_id:"30bbc462-6844-4968-4b01-5b84088e6529" response_time:0.05522707 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"91387329" true_client_ip:"-" x_b3_traceid:"194b852cb55be315" x_b3_spanid:"194b852cb55be315" x_b3_parentspanid:"-"
+   2018-10-19T04:02:28.44-0400 [RTR/5] OUT 
+   2018-10-19T04:02:28.65-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+   2018-10-19T04:02:28.65-0400 [APP/PROC/WEB/0] OUT       Executed action GetStartedDotnet.Controllers.HomeController.Index (GetStartedDotnet) in 7400.9718ms
+   2018-10-19T04:02:28.66-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+   2018-10-19T04:02:28.66-0400 [APP/PROC/WEB/0] OUT       Request finished in 7813.8019ms 200 text/html; charset=utf-8
+   2018-10-19T04:02:28.87-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+   2018-10-19T04:02:28.87-0400 [APP/PROC/WEB/0] OUT       Request starting HTTP/1.1 GET http://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/css/site.min.css?v=-CHkGyR0km2lg5iYjrHUKUNSNPYxIqXn2q6KKQO5oDI  
+   2018-10-19T04:02:28.90-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+   2018-10-19T04:02:28.90-0400 [APP/PROC/WEB/0] OUT       Sending file. Request path: '/css/site.min.css'. Physical path: '/home/vcap/deps/0/dotnet_publish/wwwroot/css/site.min.css'
+   2018-10-19T04:02:28.92-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+   2018-10-19T04:02:28.92-0400 [APP/PROC/WEB/0] OUT       Request finished in 55.4597ms 200 text/css
+   2018-10-19T04:02:29.02-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+   2018-10-19T04:02:29.02-0400 [APP/PROC/WEB/0] OUT       Request starting HTTP/1.1 GET http://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/js/site.min.js  
+   2018-10-19T04:02:29.03-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+   2018-10-19T04:02:29.03-0400 [APP/PROC/WEB/0] OUT       Request finished in 9.5468ms 404 
+   2018-10-19T04:02:29.03-0400 [RTR/3] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-19T08:02:29.018+0000] "GET /js/site.min.js HTTP/1.1" 404 0 0 "https://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.190.106.243:55985" "169.61.87.94:61170" x_forwarded_for:"70.45.220.69, 10.190.106.243" x_forwarded_proto:"https" vcap_request_id:"e162d182-6d4c-45c4-724b-aa78d3836d71" response_time:0.018568448 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"109764039" true_client_ip:"-" x_b3_traceid:"460cec0ac54b4d71" x_b3_spanid:"460cec0ac54b4d71" x_b3_parentspanid:"-"
+   2018-10-19T04:02:29.03-0400 [RTR/3] OUT 
+   2018-10-19T04:02:29.16-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+   2018-10-19T04:02:29.16-0400 [APP/PROC/WEB/0] OUT       Request starting HTTP/1.1 GET http://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/api/visitors  
+   2018-10-19T04:02:29.19-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+   2018-10-19T04:02:29.19-0400 [APP/PROC/WEB/0] OUT       Executing action method GetStartedDotnet.Controllers.VisitorsController.Get (GetStartedDotnet) with arguments ((null)) - ModelState is Valid
+   2018-10-19T04:02:29.27-0400 [APP/PROC/WEB/0] OUT HERE SERVICE{
+   2018-10-19T04:02:29.27-0400 [APP/PROC/WEB/0] OUT   "username": "1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix",
+   2018-10-19T04:02:29.27-0400 [APP/PROC/WEB/0] OUT   "password": "383a8bd6de7107d0aaa4a6c53dc6f42c9623028a93e8213dd5cddc72b4d9fea6",
+   2018-10-19T04:02:29.27-0400 [APP/PROC/WEB/0] OUT   "host": "1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix.cloudant.com"
+   2018-10-19T04:02:29.27-0400 [APP/PROC/WEB/0] OUT }
+   2018-10-19T04:02:29.30-0400 [APP/PROC/WEB/0] OUT GET	https://1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix.cloudant.com/mydb/_all_docs?include_docs=true
+   2018-10-19T04:02:29.36-0400 [APP/PROC/WEB/0] OUT OK
+   2018-10-19T04:02:29.43-0400 [APP/PROC/WEB/0] OUT TESTINGGetStartedDotnet.Models.Visitor
+   2018-10-19T04:02:29.45-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor[1]
+   2018-10-19T04:02:29.45-0400 [APP/PROC/WEB/0] OUT       Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+   2018-10-19T04:02:29.47-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+   2018-10-19T04:02:29.47-0400 [APP/PROC/WEB/0] OUT       Executed action GetStartedDotnet.Controllers.VisitorsController.Get (GetStartedDotnet) in 279.2609ms
+   2018-10-19T04:02:29.47-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+   2018-10-19T04:02:29.47-0400 [APP/PROC/WEB/0] OUT       Request finished in 307.2032ms 200 application/json; charset=utf-8
+Retrieving logs for app [36;1mGetStartedDotnet[0m in org [36;1mnelson.alemar.alonso@ibm.com[0m / space [36;1mdev[0m as [36;1mnelson.alemar.alonso@ibm.com[0m...
+
+   2018-10-23T11:15:25.90-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+   2018-10-23T11:15:25.90-0400 [APP/PROC/WEB/0] OUT       Request starting HTTP/1.1 GET http://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/  
+   2018-10-23T11:15:26.36-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+   2018-10-23T11:15:26.36-0400 [APP/PROC/WEB/0] OUT       Executing action method GetStartedDotnet.Controllers.HomeController.Index (GetStartedDotnet) with arguments ((null)) - ModelState is Valid
+   2018-10-23T11:15:29.10-0400 [RTR/2] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-23T15:15:21.345+0000] "GET / HTTP/1.1" 200 0 2859 "https://console.bluemix.net/services/cloudantnosqldb/9fc42de6-e053-4d5f-b23a-e0e9619f83f0?paneId=connectedObjects&ace_config=%7B%22region%22%3A%22us-east%22%2C%22orgGuid%22%3A%22bf7ff873-e086-40b7-9f16-e20638b29ea2%22%2C%22spaceGuid%22%3A%2220a666f2-e77f-435d-9abd-a4c67462a2ab%22%2C%22redirect%22%3A%22https%3A%2F%2Fconsole.bluemix.net%2Fdashboard%2Fapps%3Fenv_id%3Dibm%253Ayp%253Aus-east%22%2C%22bluemixUIVersion%22%3A%22v6%22%2C%22crn%22%3A%22crn%3Av1%3Abluemix%3Apublic%3Acloudantnosqldb%3Aus-east%3As%2F20a666f2-e77f-435d-9abd-a4c67462a2ab%3A9fc42de6-e053-4d5f-b23a-e0e9619f83f0%3Acf-service-instance%3A%22%7D&env_id=ibm%3Ayp%3Aus-east" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.190.106.242:11445" "169.60.82.180:61138" x_forwarded_for:"24.48.214.20, 10.190.106.242" x_forwarded_proto:"https" vcap_request_id:"3f855c1f-5688-46fa-4659-59258da8e72a" response_time:7.758387854 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"517449551" true_client_ip:"-" x_b3_traceid:"a9781f181dbc6504" x_b3_spanid:"a9781f181dbc6504" x_b3_parentspanid:"-"
+   2018-10-23T11:15:29.10-0400 [RTR/2] OUT 
+   2018-10-23T11:15:29.36-0400 [RTR/2] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-23T15:15:29.305+0000] "GET /css/site.min.css?v=-CHkGyR0km2lg5iYjrHUKUNSNPYxIqXn2q6KKQO5oDI HTTP/1.1" 304 0 0 "https://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.190.106.242:11445" "169.60.82.180:61138" x_forwarded_for:"24.48.214.20, 10.190.106.242" x_forwarded_proto:"https" vcap_request_id:"5311816b-c602-40eb-681e-ee5df43fc41d" response_time:0.055982416 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"260832673" true_client_ip:"-" x_b3_traceid:"12b0dd7eca6d81b8" x_b3_spanid:"12b0dd7eca6d81b8" x_b3_parentspanid:"-"
+   2018-10-23T11:15:29.36-0400 [RTR/2] OUT 
+   2018-10-23T11:15:29.44-0400 [RTR/2] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-23T15:15:29.442+0000] "GET /js/site.min.js HTTP/1.1" 404 0 0 "https://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.190.106.242:11445" "169.60.82.180:61138" x_forwarded_for:"24.48.214.20, 10.190.106.242" x_forwarded_proto:"https" vcap_request_id:"8fb46821-d545-4397-4e6e-70b0fddcdf34" response_time:0.006394029 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"321918423" true_client_ip:"-" x_b3_traceid:"327e6508e309f71f" x_b3_spanid:"327e6508e309f71f" x_b3_parentspanid:"-"
+   2018-10-23T11:15:29.44-0400 [RTR/2] OUT 
+   2018-10-23T11:15:29.85-0400 [RTR/2] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-23T15:15:29.592+0000] "GET /api/visitors HTTP/1.1" 200 0 2067 "https://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.190.106.242:11445" "169.60.82.180:61138" x_forwarded_for:"24.48.214.20, 10.190.106.242" x_forwarded_proto:"https" vcap_request_id:"ee96d9a5-7ddb-4fd5-7787-70adcd9f8b95" response_time:0.263165664 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"260832769" true_client_ip:"-" x_b3_traceid:"b32daaea6df0b162" x_b3_spanid:"b32daaea6df0b162" x_b3_parentspanid:"-"
+   2018-10-23T11:15:29.85-0400 [RTR/2] OUT 
+   2018-10-23T11:15:32.27-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor[1]
+   2018-10-23T11:15:32.27-0400 [APP/PROC/WEB/0] OUT       Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+   2018-10-23T11:15:33.51-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+   2018-10-23T11:15:33.51-0400 [APP/PROC/WEB/0] OUT       Executed action GetStartedDotnet.Controllers.HomeController.Index (GetStartedDotnet) in 7213.9457ms
+   2018-10-23T11:15:33.53-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+   2018-10-23T11:15:33.53-0400 [APP/PROC/WEB/0] OUT       Request finished in 7655.8824ms 200 text/html; charset=utf-8
+   2018-10-23T11:15:33.73-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+   2018-10-23T11:15:33.73-0400 [APP/PROC/WEB/0] OUT       Request starting HTTP/1.1 GET http://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/css/site.min.css?v=-CHkGyR0km2lg5iYjrHUKUNSNPYxIqXn2q6KKQO5oDI  
+   2018-10-23T11:15:33.77-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+   2018-10-23T11:15:33.77-0400 [APP/PROC/WEB/0] OUT       The file /css/site.min.css was not modified
+   2018-10-23T11:15:33.78-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+   2018-10-23T11:15:33.78-0400 [APP/PROC/WEB/0] OUT       Request finished in 53.5673ms 304 text/css
+   2018-10-23T11:15:33.86-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+   2018-10-23T11:15:33.86-0400 [APP/PROC/WEB/0] OUT       Request starting HTTP/1.1 GET http://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/js/site.min.js  
+   2018-10-23T11:15:33.87-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+   2018-10-23T11:15:33.87-0400 [APP/PROC/WEB/0] OUT       Request finished in 4.0842ms 404 
+   2018-10-23T11:15:34.01-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+   2018-10-23T11:15:34.01-0400 [APP/PROC/WEB/0] OUT       Request starting HTTP/1.1 GET http://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/api/visitors  
+   2018-10-23T11:15:34.04-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+   2018-10-23T11:15:34.04-0400 [APP/PROC/WEB/0] OUT       Executing action method GetStartedDotnet.Controllers.VisitorsController.Get (GetStartedDotnet) with arguments ((null)) - ModelState is Valid
+   2018-10-23T11:15:34.13-0400 [APP/PROC/WEB/0] OUT HERE SERVICE{
+   2018-10-23T11:15:34.13-0400 [APP/PROC/WEB/0] OUT   "username": "1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix",
+   2018-10-23T11:15:34.13-0400 [APP/PROC/WEB/0] OUT   "password": "383a8bd6de7107d0aaa4a6c53dc6f42c9623028a93e8213dd5cddc72b4d9fea6",
+   2018-10-23T11:15:34.13-0400 [APP/PROC/WEB/0] OUT   "host": "1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix.cloudant.com"
+   2018-10-23T11:15:34.13-0400 [APP/PROC/WEB/0] OUT }
+   2018-10-23T11:15:34.15-0400 [APP/PROC/WEB/0] OUT GET	https://1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix.cloudant.com/mydb/_all_docs?include_docs=true
+   2018-10-23T11:15:34.23-0400 [APP/PROC/WEB/0] OUT OK
+   2018-10-23T11:15:34.26-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor[1]
+   2018-10-23T11:15:34.26-0400 [APP/PROC/WEB/0] OUT       Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+   2018-10-23T11:15:34.27-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+   2018-10-23T11:15:34.27-0400 [APP/PROC/WEB/0] OUT       Executed action GetStartedDotnet.Controllers.VisitorsController.Get (GetStartedDotnet) in 234.231ms
+   2018-10-23T11:15:34.27-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+   2018-10-23T11:15:34.27-0400 [APP/PROC/WEB/0] OUT       Request finished in 259.7988ms 200 text/plain; charset=utf-8
+   2018-10-23T11:21:38.38-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+   2018-10-23T11:21:38.38-0400 [APP/PROC/WEB/0] OUT       Request starting HTTP/1.1 POST http://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/api/visitors application/json 15
+   2018-10-23T11:21:38.65-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+   2018-10-23T11:21:38.65-0400 [APP/PROC/WEB/0] OUT       Executing action method GetStartedDotnet.Controllers.VisitorsController.Post (GetStartedDotnet) with arguments (GetStartedDotnet.Models.Visitor) - ModelState is Valid
+   2018-10-23T11:21:38.65-0400 [APP/PROC/WEB/0] OUT HERE SERVICE{
+   2018-10-23T11:21:38.65-0400 [APP/PROC/WEB/0] OUT   "username": "1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix",
+   2018-10-23T11:21:38.65-0400 [APP/PROC/WEB/0] OUT   "password": "383a8bd6de7107d0aaa4a6c53dc6f42c9623028a93e8213dd5cddc72b4d9fea6",
+   2018-10-23T11:21:38.65-0400 [APP/PROC/WEB/0] OUT   "host": "1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix.cloudant.com"
+   2018-10-23T11:21:38.65-0400 [APP/PROC/WEB/0] OUT }
+   2018-10-23T11:21:38.67-0400 [APP/PROC/WEB/0] OUT POST	https://1e653f13-e1a1-40da-a006-84fc2fdef273-bluemix.cloudant.com/mydb
+   2018-10-23T11:21:38.71-0400 [APP/PROC/WEB/0] OUT Created
+   2018-10-23T11:21:38.77-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+   2018-10-23T11:21:38.77-0400 [APP/PROC/WEB/0] OUT       Executed action GetStartedDotnet.Controllers.VisitorsController.Post (GetStartedDotnet) in 340.4754ms
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT [41m[30mfail[39m[22m[49m: Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware[0]
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT       An unhandled exception has occurred: Could not convert string to integer: 7cad39cda4ebaefebc54be076c5db18a. Path 'id', line 1, position 50.
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT Newtonsoft.Json.JsonReaderException: Could not convert string to integer: 7cad39cda4ebaefebc54be076c5db18a. Path 'id', line 1, position 50.
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Newtonsoft.Json.JsonReader.ReadInt32String(String s)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Newtonsoft.Json.JsonTextReader.FinishReadQuotedNumber(ReadType readType)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Newtonsoft.Json.JsonTextReader.ReadAsInt32()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.ReadForType(JsonReader reader, JsonContract contract, Boolean hasConverter)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, Encoding effectiveEncoding, IFormatterLogger formatterLogger)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStream(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Net.Http.Formatting.BaseJsonMediaTypeFormatter.ReadFromStreamAsync(Type type, Stream readStream, HttpContent content, IFormatterLogger formatterLogger)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Net.Http.HttpContentExtensions.<ReadAsAsyncCore>d__17`1.MoveNext()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at GetStartedDotnet.Services.CloudantService.<CreateAsync>d__4.MoveNext() in /tmp/app/src/GetStartedDotnet/Services/CloudantService.cs:line 44
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at GetStartedDotnet.Controllers.VisitorsController.<Post>d__4.MoveNext() in /tmp/app/src/GetStartedDotnet/Controllers/VisitorsController.cs:line 53
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at lambda_method(Closure , Object )
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT --- End of stack trace from previous location where exception was thrown ---
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   2018-10-23T11:21:38.80-0400 [APP/PROC/WEB/0] OUT    at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>d__6.MoveNext()
+   2018-10-23T11:21:38.82-0400 [APP/PROC/WEB/0] OUT [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+   2018-10-23T11:21:38.82-0400 [APP/PROC/WEB/0] OUT       Request finished in 443.9776ms 404 
+   2018-10-23T11:21:38.82-0400 [RTR/1] OUT getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net - [2018-10-23T15:21:38.369+0000] "POST /api/visitors HTTP/1.1" 404 15 0 "https://getstarteddotnet-featherheaded-slippage.us-east.mybluemix.net/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36" "10.188.42.212:15513" "169.60.82.180:61138" x_forwarded_for:"24.48.214.20, 10.188.42.212" x_forwarded_proto:"https" vcap_request_id:"97c11094-4787-4536-65ca-7a7c9f17cc16" response_time:0.452349851 app_id:"c747c377-ec24-4647-9579-88bb34fcc74d" app_index:"0" x_global_transaction_id:"594025375" true_client_ip:"-" x_b3_traceid:"32c428054a49030e" x_b3_spanid:"32c428054a49030e" x_b3_parentspanid:"-"
+   2018-10-23T11:21:38.82-0400 [RTR/1] OUT 
+Retrieving logs for app [36;1mGetStartedDotnet[0m in org [36;1mnelson.alemar.alonso@ibm.com[0m / space [36;1mdev[0m as [36;1mnelson.alemar.alonso@ibm.com[0m...
+

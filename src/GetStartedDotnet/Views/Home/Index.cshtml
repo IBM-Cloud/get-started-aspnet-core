@@ -60,12 +60,25 @@ $( document ).ready(function() {
         }
     });
 
-    //Retreive all the visitors from the database
-    function getNames(){
+    //Retrieve all the visitors from the database
+    function getNames() {
         $.get("/api/visitors")
-            .done(function(data) {
-                if(data.length > 0) {
-                    $('#databaseNames').html($.i18n('database_contents') + JSON.stringify(data));
+            .done(function (data) {
+                if (data.length > 0) {
+                    try
+                    {
+                        var json = JSON.parse(data);
+                        var rows = json.rows;
+                        var names = rows.map(function(row){
+                                            return row.doc.Name;
+                                            });
+                        $('#databaseNames').html("Database contents: " + JSON.stringify(names));
+                    }
+                    catch (e)
+                    {
+                        $('#databaseNames').html("Database contents: " + data);
+                    }
+                    
                 }
             });
         }
