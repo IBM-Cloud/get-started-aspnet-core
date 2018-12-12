@@ -22,7 +22,7 @@ $( document ).ready(function() {
             "welcome": "Welcome.",
             "name": "name",
             "what_is_your_name": "What is your name?",
-            "hello": "Hello $1",
+            "hello": "Hello $1!",
             "added_to_database": "Hello $1, I've added you to the database!",
             "database_contents": "Database contents: "
         },
@@ -54,6 +54,7 @@ $( document ).ready(function() {
                 data: JSON.stringify({ name: name })
             })
                 .done(function (data) {
+                    console.log("post data "+data);
                     $('#response').html($.i18n('hello', data)); 
                     getNames();
                 });
@@ -64,6 +65,7 @@ $( document ).ready(function() {
     function getNames() {
         $.get("/api/visitors")
             .done(function (data) {
+                console.log(data);
                 if (data.length > 0) {
                     try
                     {

@@ -24,7 +24,8 @@ public class Startup
             .SetBasePath(env.ContentRootPath)
             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
             .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-            .AddJsonFile("vcap-local.json", optional:true); // when running locally, store VCAP_SERVICES credentials in vcap-local.json
+            .AddJsonFile("vcap-local.json", optional: true) // when running locally, store VCAP_SERVICES credentials in vcap-local.json
+            .AddEnvironmentVariables();
 
         Configuration = builder.Build();
 
@@ -32,7 +33,7 @@ public class Startup
         if (vcapServices != null)
         {
             dynamic json = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(vcapServices);
-            
+
             // CF 'cloudantNoSQLDB' service
             if (json.ContainsKey("cloudantNoSQLDB"))
             {
@@ -55,13 +56,13 @@ public class Startup
                 {
                     // Failed to read Cloudant uri, ignore this and continue without a database
                 }
-            } 
+            }
             // user-provided service with 'cloudant' in the name
-            else if (json.ContainsKey("user-provided")) 
+            else if (json.ContainsKey("user-provided"))
             {
-                foreach (var service in json["user-provided"]) 
+                foreach (var service in json["user-provided"])
                 {
-                    if (((String) service.name).Contains("cloudant")) 
+                    if (((String)service.name).Contains("cloudant"))
                     {
                         try
                         {
@@ -77,13 +78,36 @@ public class Startup
                     }
                 }
             }
+
+        }
+        else if (Configuration.GetSection("services").Exists())
+        {
+            try
+            {
+                Configuration["cloudantNoSQLDB:0:credentials:username"] = Configuration["services:cloudantNoSQLDB:0:credentials:username"];
+                Console.WriteLine("username ");
+                Console.WriteLine(Configuration["cloudantNoSQLDB:0:credentials:username"]);
+                Configuration["cloudantNoSQLDB:0:credentials:password"] = Configuration["services:cloudantNoSQLDB:0:credentials:password"];
+                Console.WriteLine("password ");
+                Console.WriteLine(Configuration["cloudantNoSQLDB:0:credentials:password"]);
+                Configuration["cloudantNoSQLDB:0:credentials:host"] = Configuration["services:cloudantNoSQLDB:0:credentials:host"];
+                Console.WriteLine("host ");
+                Console.WriteLine(Configuration["cloudantNoSQLDB:0:credentials:host"]);
+                Configuration["cloudantNoSQLDB:0:credentials:url"] = Configuration["services:cloudantNoSQLDB:0:credentials:url"];
+                Console.WriteLine("url ");
+                Console.WriteLine(Configuration["cloudantNoSQLDB:0:credentials:url"]);
+            }
+            catch (Exception)
+            {
+                // Failed to read Cloudant uri, ignore this and continue without a database
+            }
+
         }
     }
 
     public void ConfigureServices(IServiceCollection services)
     {
         // Add framework services.
-
 
         var creds = new Creds()
         {
@@ -100,11 +124,9 @@ public class Startup
             services.AddTransient<LoggingHandler>();
             services.AddHttpClient("cloudant", client =>
             {
-                Console.WriteLine("HERE SERVICE" + JObject.FromObject(creds));
-
                 var auth = Convert.ToBase64String(Encoding.ASCII.GetBytes(creds.username + ":" + creds.password));
 
-                client.BaseAddress = new Uri("https://" + creds.host);
+                client.BaseAddress = new Uri(Configuration["cloudantNoSQLDB:0:credentials:url"]);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", auth);
@@ -113,7 +135,7 @@ public class Startup
         }
 
         services.AddMvc();
-        
+
     }
 
     public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
@@ -145,7 +167,7 @@ public class Startup
 
     class LoggingHandler : DelegatingHandler
     {
-        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, 
+        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,
                                                                      System.Threading.CancellationToken cancellationToken)
         {
             Console.WriteLine("{0}\t{1}", request.Method, request.RequestUri);

@@ -29,13 +29,14 @@ namespace GetStartedDotnet.Services
 
             var _client = _factory.CreateClient("cloudant");
 
-            var response = await _client.PostAsync("https://" + _cloudantCreds.host, new StringContent(jsonInString, Encoding.UTF8, "application/json"));
+            var response = await _client.PostAsync(_client.BaseAddress+_dbName, new StringContent(jsonInString, Encoding.UTF8, "application/json"));
 
-            if(response.IsSuccessStatusCode)
+            if (response.IsSuccessStatusCode)
             {
                 var responseJson = await response.Content.ReadAsStringAsync();
                 return responseJson;
             }
+
             string msg = "Failure to POST. Status Code: " + response.StatusCode + ". Reason: " + response.ReasonPhrase;
             Console.WriteLine(msg);
             return JsonConvert.SerializeObject(new { msg = "Failure to POST. Status Code: " + response.StatusCode + ". Reason: " + response.ReasonPhrase });
@@ -44,11 +45,27 @@ namespace GetStartedDotnet.Services
         public async Task<dynamic> GetAllAsync()
         {
             var _client = _factory.CreateClient("cloudant");
-            var response = await _client.GetAsync(_dbName + "/_all_docs?include_docs=true");
+            var response = await _client.GetAsync(_client.BaseAddress + _dbName+"/_all_docs?include_docs=true");
+
             if (response.IsSuccessStatusCode)
             {
                 return await response.Content.ReadAsStringAsync();
             }
+            else if (Equals(response.ReasonPhrase,"Object Not Found")) //need to create database
+            {
+                var contents = new StringContent("", Encoding.UTF8, "application/json");
+                response = await _client.PutAsync(_client.BaseAddress + _dbName, contents); //creating database using PUT request
+                if (response.IsSuccessStatusCode) //if successful, try GET request again
+                {
+                    response = await _client.GetAsync(_client.BaseAddress + _dbName + "/_all_docs?include_docs=true");
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return await response.Content.ReadAsStringAsync();
+                    }
+                }
+
+            }
+
             string msg = "Failure to GET. Status Code: " + response.StatusCode + ". Reason: " + response.ReasonPhrase;
             Console.WriteLine(msg);
             return JsonConvert.SerializeObject(new { msg = msg });
