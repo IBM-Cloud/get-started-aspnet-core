@@ -3,6 +3,7 @@ using GetStartedDotnet.Models;
 using GetStartedDotnet.Services;
 using System.Threading.Tasks;
 using System.Text.Encodings.Web;
+using System;
 
 namespace GetStartedDotnet.Controllers
 {
@@ -24,7 +25,7 @@ namespace GetStartedDotnet.Controllers
         {
             if (_cloudantService == null)
             {
-                return new string[] { };
+                return new string[] { "No database connection" };
             }
             else
             {
@@ -36,12 +37,13 @@ namespace GetStartedDotnet.Controllers
         [HttpPost]
         public async Task<dynamic> Post([FromBody]Visitor visitor)
         {
-            if(_cloudantService != null)
+            if (_cloudantService != null)
             {
-                await _cloudantService.CreateAsync(visitor);
+                var response = await _cloudantService.CreateAsync(visitor);
+                Console.WriteLine("POST RESULT " + response);
             }
 
-            return new string[] {"Hello, " + visitor.Name+"!"};
+            return new string[] {visitor.Name};
         }
     }
 }

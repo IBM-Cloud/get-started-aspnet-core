@@ -34,4 +34,10 @@
     <Compile Remove="Migrations\VisitorsDbContextModelSnapshot.cs" />
     <Compile Remove="Migrations\20171012161451_InitialMigration.Designer.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="EmptyJSONFile.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vcap-local.json" />
+  </ItemGroup>
 </Project>
