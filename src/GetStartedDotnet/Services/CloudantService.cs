@@ -36,6 +36,22 @@ namespace GetStartedDotnet.Services
                 var responseJson = await response.Content.ReadAsStringAsync();
                 return responseJson;
             }
+            else if (Equals(response.ReasonPhrase,"Object Not Found")) //need to create database
+            {
+                var contents = new StringContent("", Encoding.UTF8, "application/json");
+                response = await _client.PutAsync(_client.BaseAddress + _dbName, contents); //creating database using PUT request
+                if (response.IsSuccessStatusCode) //if successful, try POST request again
+                {
+                    var response = await _client.PostAsync(_client.BaseAddress+_dbName, new StringContent(jsonInString, Encoding.UTF8, "application/json"));
+                    
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var responseJson = await response.Content.ReadAsStringAsync();
+                        return responseJson;
+                    }
+                }
+
+            }
 
             string msg = "Failure to POST. Status Code: " + response.StatusCode + ". Reason: " + response.ReasonPhrase;
             Console.WriteLine(msg);
