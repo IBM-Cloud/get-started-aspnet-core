@@ -42,7 +42,7 @@ namespace GetStartedDotnet.Services
                 response = await _client.PutAsync(_client.BaseAddress + _dbName, contents); //creating database using PUT request
                 if (response.IsSuccessStatusCode) //if successful, try POST request again
                 {
-                    var response = await _client.PostAsync(_client.BaseAddress+_dbName, new StringContent(jsonInString, Encoding.UTF8, "application/json"));
+                    response = await _client.PostAsync(_client.BaseAddress+_dbName, new StringContent(jsonInString, Encoding.UTF8, "application/json"));
                     
                     if (response.IsSuccessStatusCode)
                     {
