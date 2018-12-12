@@ -37,7 +37,4 @@
   <ItemGroup>
     <Content Remove="EmptyJSONFile.json" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="vcap-local.json" />
-  </ItemGroup>
 </Project>

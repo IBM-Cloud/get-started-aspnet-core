@@ -80,7 +80,7 @@ public class Startup
             }
 
         }
-        else
+        else if (Configuration.GetSection("services").Exists())
         {
             try
             {
