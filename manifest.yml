@@ -1,6 +1,6 @@
 ---
 applications:
-- name: GetStartedDotnet
+- name: helloMyNewApp
   random-route: true
   memory: 512M
   env:
