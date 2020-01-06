@@ -20,7 +20,7 @@ namespace GetStartedDotnet.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Name");
+                    b.Property<string>("name");
 
                     b.HasKey("Id");
 
