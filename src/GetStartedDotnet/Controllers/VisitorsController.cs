@@ -43,7 +43,7 @@ namespace GetStartedDotnet.Controllers
                 Console.WriteLine("POST RESULT " + response);
             }
 
-            return new string[] {visitor.name};
+            return new string[] {visitor.Name};
         }
     }
 }
