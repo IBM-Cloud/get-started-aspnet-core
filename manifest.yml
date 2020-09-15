@@ -2,7 +2,4 @@
 applications:
 - name: GetStartedDotnet
   random-route: true
-  memory: 512M
-  env:
-    DOTNET_CLI_TELEMETRY_OPTOUT: 1
-    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+  memory: 256M
